@@ -1,0 +1,269 @@
+/*
+*@module: blogger 
+*@Author: zhangxi 2015-3-10
+*@Update: 
+*/ 
+
+//blogger-step1
+.blogger-step1-phone{
+    a{
+        text-decoration: underline;
+        color:$red;
+    }
+}
+.blogger-img{
+    margin-bottom: 25px;
+}
+.blogger-wanted{
+    .fashion-policy{
+        border-bottom:1px dashed $gray-light;
+        margin-bottom:25px;         
+    }
+    h3{
+            font-size:$font-size-base;
+            font-weight:bold;
+            color:$gray-darker;
+        }
+     p{
+            color:$gray-dark;
+            font-size:$font-size-base;
+        }    
+    a{
+        color:$red;
+        &:hover{
+            opacity:0.8 ;                   
+        }
+    }
+    .blogger-form{
+        margin-top:30px;
+        .fashion-tit{
+            color: $gray;
+            font: 18px/40px "Verdana";
+            text-transform: uppercase;
+        }
+        .sub-info{
+            font-size:$font-size-base;
+            label{
+                font-weight:normal;
+                span{
+                    color:$red;
+                }
+            }
+            li{
+                margin-top:20px;
+                td{
+                    padding-bottom:10px ;
+                }
+            }
+            .selected-option {
+                border: 1px solid $gray-light;
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+                padding: 0 5px;
+                vertical-align: middle;
+                z-index: 3;
+            }
+            .sub-info-text {
+                border: 1px solid $gray-light;
+                height: 24px;
+                line-height: 24px;
+            }
+            textarea{
+                height:50px;
+                color: $gray;
+                line-height: 18px;
+                word-wrap: break-word;
+            }
+        }
+    }
+    .fashion-tit{
+            color: $gray;
+            font: 18px/40px "Verdana";
+            text-transform: uppercase;
+        }
+    .fashion-banner{        
+        p{
+            color: $gray-dark;
+             a {
+                 color: $red;
+                 text-decoration: underline;
+             }
+        }       
+    }
+    .banner-area {
+        text-align: center;
+        table {
+            margin: auto;
+            padding: 0;
+            td {
+                padding-bottom:10px;
+                text-align: center;
+                vertical-align: middle;
+                img {
+                    border: 1px solid $gray-light;
+                }
+            }
+        }
+    }
+    .add-more{
+        color:$red;
+        text-decoration: underline ;
+        background-color:$white ;
+    }
+}
+.fashion-thank {
+    color: #666;
+    height: 180px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 95%;
+    h4 {
+        font-size: 16px;
+        margin: 60px 0 36px;
+    }
+}
+#site_link{
+    display:none; 
+    position:fixed; 
+    z-index:1100; 
+    height:480px; 
+    width:22%; 
+    top:20%; 
+    left:20%; 
+    margin-left:0px; 
+    margin-top: 100px;
+    @media (max-width: 767px) {
+        width:100%;
+        margin-left:-30%;
+        margin-top:10%;
+    }
+    .closebtn { 
+        height:32px; 
+        width:25px; 
+        position:absolute; 
+        right: 5px; 
+        top: 320px; 
+        z-index:129; 
+        cursor:pointer;
+    }
+    img { 
+        position:fixed; 
+        z-index:119;
+    }
+}
+
+#cboxTopLeft{
+    width:25px; 
+    height:25px; 
+    background:url("../images/blogger/border1.png") no-repeat 0 0;
+}
+#cboxTopCenter{
+    height:25px; 
+    background:url("../images/blogger/border1.png") repeat-x 0 -50px;
+    }
+#cboxTopRight{
+    width:25px; 
+    height:25px; 
+    background:url("../images/blogger/border1.png") no-repeat -25px 0;
+    }
+#cboxBottomLeft{
+    width:25px; 
+    height:25px; 
+    background:url("../images/blogger/border1.png") no-repeat 0 -25px;
+    }
+#cboxBottomCenter{
+    height:25px; 
+    background:url("../images/blogger/border1.png") repeat-x 0 -75px;
+    }
+#cboxBottomRight{
+    width:25px; 
+    height:25px; 
+    background:url("../images/blogger/border1.png") no-repeat -25px -25px;
+    }
+#cboxMiddleLeft{
+    width:25px; 
+    background:url("../images/blogger/border2.png") repeat-y 0 0;
+    }
+#cboxMiddleRight{
+    width:25px; 
+    background:url("../images/blogger/border2.png") repeat-y -25px 0;
+    }
+#cboxContent{background:#fff;}
+#cboxLoadedContent{margin-bottom:20px;}
+#cboxTitle{
+    position:absolute; 
+    bottom:0px; 
+    left:0; 
+    text-align:center; 
+    width:100%; 
+    color:#999;
+}
+#cboxCurrent{
+    position:absolute; 
+    bottom:0px; 
+    left:100px; 
+    color:#999;
+}
+#cboxSlideshow{
+    position:absolute; 
+    bottom:0px; 
+    right:42px; 
+    color:#444;
+}
+#cboxPrevious{
+    position:absolute; 
+    bottom:0px; 
+    left:0; 
+    color:#444;
+}
+#cboxNext{
+    position:absolute; 
+    bottom:0px; 
+    left:63px; 
+    color:#444;
+}
+#cboxClose{
+    position:absolute; 
+    bottom:0; 
+    right:0; 
+    display:block; 
+    color:#444;
+}
+#catalog_link { 
+    display:none; 
+    z-index:1100; 
+    height:480px; 
+    width:640px; 
+    top:50%; 
+    left:50%; 
+    margin-left:0px; 
+    margin-top: 100px;
+}
+.order{
+    position: fixed; 
+    padding: 10px 10px 20px; 
+    top: 30%; 
+    left: 30%; 
+    width: 34%; 
+    height: 230px; 
+    z-index: 1000; 
+    background: none repeat scroll 0% 0% rgb(255, 255, 255); 
+    border:1px solid rgb(204, 204, 204);
+    @media (max-width: 767px) {
+        width:100%;
+        margin-left:-30%;
+        margin-top:10%;
+    }
+    }
+.fashion-thank h3 {
+    font: 24px Arial;
+    margin-top: 86px;
+    text-transform: uppercase;
+}
+.fashion-thank p {
+    font: 12px Arial;
+    margin-top: 10px;
+}

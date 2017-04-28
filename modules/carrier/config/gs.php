@@ -1,0 +1,67 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+return
+array("country" =>
+    array(
+        0=>array('name'=>'Canada',	'iscode'=>'CA',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+1=>array('name'=>'United States','iscode'=>'US',	'shipping_fee'=>'5.95','shipping_fee_min'=>'1000'),
+2=>array('name'=>'Hong Kong','iscode'=>'HK',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+3=>array('name'=>'Japan',	'iscode'=>'JP',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+4=>array('name'=>'Malaysia',	'iscode'=>'MY',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+5=>array('name'=>'Singapore','iscode'=>'SG',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+6=>array('name'=>'South Korea','iscode'=>'KR',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+7=>array('name'=>'Taiwan',	'iscode'=>'TW',	'shipping_fee'=>'13.95','shipping_fee_min'=>'1000'),
+8=>array('name'=>'Australia','iscode'=>'AU',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+9=>array('name'=>'Austria',	'iscode'=>'AT',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+10=>array('name'=>'Belgium',	'iscode'=>'BE',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+11=>array('name'=>'Denmark',	'iscode'=>'DK',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+12=>array('name'=>'Finland',	'iscode'=>'FI',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+13=>array('name'=>'France',	'iscode'=>'FR',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+14=>array('name'=>'Germany',	'iscode'=>'DE',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+15=>array('name'=>'Ireland',	'iscode'=>'IE',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+16=>array('name'=>'Italy',	'iscode'=>'IT',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+17=>array('name'=>'New Zealand','iscode'=>'NZ',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+18=>array('name'=>'Norway',	'iscode'=>'NO',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+19=>array('name'=>'Malta',	'iscode'=>'MT',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+20=>array('name'=>'Portugal',	'iscode'=>'PT',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+21=>array('name'=>'Spain',	'iscode'=>'ES',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+22=>array('name'=>'Sweden',	'iscode'=>'SE',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+23=>array('name'=>'Switzerland','iscode'=>'CH',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+24=>array('name'=>'United Kingdom','iscode'=>'GB',	'shipping_fee'=>'19.95','shipping_fee_min'=>'1000'),
+25=>array('name'=>'Brazil',	'iscode'=>'BR',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+26=>array('name'=>'Greece',	'iscode'=>'GR',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+27=>array('name'=>'Israel',	'iscode'=>'IL',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+28=>array('name'=>'Kuwait',	'iscode'=>'KW',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+29=>array('name'=>'Mexico',	'iscode'=>'MX',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+30=>array('name'=>'Poland',	'iscode'=>'PL',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+31=>array('name'=>'Turkey',	'iscode'=>'TR',	'shipping_fee'=>'24.95','shipping_fee_min'=>'1000'),
+32=>array('name'=>'Argentina','iscode'=>'AR',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+33=>array('name'=>'Croatia',	'iscode'=>'HR',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+34=>array('name'=>'Cyprus',	'iscode'=>'CY',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+35=>array('name'=>'Czech Republic','iscode'=>'CZ',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+36=>array('name'=>'Hungary',	'iscode'=>'HU',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+37=>array('name'=>'Iceland',	'iscode'=>'IS',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+38=>array('name'=>'Jamaica',	'iscode'=>'JM',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+39=>array('name'=>'Kenya',	'iscode'=>'KE',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+40=>array('name'=>'Lebanon',	'iscode'=>'LB',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+41=>array('name'=>'Lithuania','iscode'=>'LT',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+42=>array('name'=>'Netherlands','iscode'=>'NL',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+43=>array('name'=>'Paraguay',	'iscode'=>'PY',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+44=>array('name'=>'Peru',	'iscode'=>'PE',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+45=>array('name'=>'Puerto Rico','iscode'=>'PR',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+46=>array('name'=>'Qatar',	'iscode'=>'QA',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+47=>array('name'=>'Romania',	'iscode'=>'RO',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+48=>array('name'=>'Saudi Arabia','iscode'=>'SA',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+49=>array('name'=>'Slovenia',	'iscode'=>'SI',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+50=>array('name'=>'South Africa','iscode'=>'ZA',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+51=>array('name'=>'Uruguay',	'iscode'=>'UY',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+52=>array('name'=>'Ukraine',	'iscode'=>'UA',	'shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+53=>array('name'=>'United Arab Emirates','iscode'=>'AE','shipping_fee'=>'29.95','shipping_fee_min'=>'1000'),
+54=>array('name'=>'Russian Federation',	'iscode'=>'RU',	'shipping_fee'=>''),
+    )
+)
+?>

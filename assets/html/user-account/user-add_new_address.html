@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>user add-new-address</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- header begin -->
+
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a>
+						<a href="user-address_book.html"> > address book</a> > add new address
+					</div>
+					<div class="back visible-xs-inline hidden-sm hidden-md hidden-lg">&lt;&lt;&nbsp;<a class="back" href="/">back</a></div>
+				</div>
+			</div>
+			<!-- main-middle begin -->
+			<div class="container">
+				<div class="row">
+					<aside id="aside" class="col-sm-3 hidden-xs">
+						<a href="#" class="user-home hidden-xs">My Account</a>
+						<div class="category-box">
+							<h3 class="bg">My Orders</h3>
+							<ul class="scroll-list">
+								<li><a href="user-order history.html">Order History</a>
+								</li>
+								<li><a href="#">Unpaid Orders</a>
+								</li>
+								<li><a href="#">Wish List</a>
+								</li>
+								<li><a href="#">Track Order</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">My Profile</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Account Setting</a>
+								</li>
+								<li><a href="#">Change Password</a>
+								</li>
+								<li><a href="user-address_book.html" class="on">Address Book</a>
+								</li>
+								<li><a href="#">Create Address</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">MY POINTS & COUPONS</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Points History</a>
+								</li>
+								<li><a href="#">My Coupons</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					<article class="user col-sm-9 col-xs-12">
+						<div class="tit">
+							<h2>Add New Address</h2>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 hidden-xs"></div>
+							<form class="user-form user-share-form col-sm-8 col-xs-12" method="post" action="#">
+								<ul>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> First Name:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input class="text text-long col-sm-12 col-xs-12" type="text" name="firstname" value="">
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> Last Name:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input class="text text-long col-sm-12 col-xs-12" type="text" name="lastname" value="">
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> Address:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<textarea class="textarea-long col-sm-12 col-xs-12" name="address"></textarea>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12"><span>*</span> Country:</label>
+										<div class="col-sm-9 col-xs-12">
+											<div class="wdrop">
+												<select class="selected-option col-sm-12 col-xs-12">
+													<option value="" class="selected"> default </option>
+													<option value=""> default </option>
+													<option value=""> default </option>
+												</select>
+												<input class="Js_repNum" type="hidden" value="DE" name="country" />
+											</div>
+										</div>
+									</li>
+									<li class="states">
+										<label for="state" class="col-sm-3 col-xs-12">
+											<span>*</span>
+											<font id="">County / Province</font> :
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input id="state" class="text text-long col-sm-12 col-xs-12" type="text" onblur="$('#shipping_state').val($(this).val());" maxlength="320" value="" name="state">
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> City / Town:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input class="text text-long col-sm-12 col-xs-12" type="text" name="city" value="">
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> Zip / Postal Code:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input class="text text-long col-sm-12 col-xs-12" type="text" name="zip" value="">
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">
+											<span>*</span> Phone:
+										</label>
+										<div class="col-sm-9 col-xs-12">
+											<input class="text text-long col-sm-12 col-xs-12" type="text" name="phone" value="">
+											<p class="phone-tips col-sm-12 col-xs-12">Please leave correct and complete phone number for accurate delivery by postman</p>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 xs-hidden">&nbsp; </label>
+										<div class="btn-grid12 col-sm-9 col-xs-12">
+											<input id="default" class="radio" type="checkbox" value="1" name="default">
+											<span for="default">Make this your default shipping address.</span>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 xs-hidden">&nbsp;</label>
+										<div class="btn-grid12 col-sm-9 col-xs-12">
+											<input class="btn btn-primary btn-sm" type="submit" value="save & Add New">
+											<input class="btn btn-default btn-sm" type="reset" value="Cancel">
+										</div>
+									</li>
+								</ul>
+							</form>
+							<div class="col-sm-2 hidden-xs"></div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer begin -->
+
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+		<script src="../../js/plugin.js"></script>
+		<script src="../../js/slider.js"></script>
+		<script>
+	    $(".user-form").validate({
+	        rules: {
+	            firstname: {    
+	                required: true,
+	                maxlength:50
+	            },
+	            lastname: {    
+	                required: true,
+	                maxlength:50
+	            },
+	            address: {
+	                required: true,
+	                maxlength:200
+	            },
+	            zip: {
+	                required: true,
+	                maxlength:50
+	            },
+	            city: {
+	                required: true,
+	                maxlength:50
+	            },
+	            country: {
+	                required: true,
+	                maxlength:50
+	            },
+	            state: {
+	                required: true,
+	                maxlength:50
+	            },
+	            phone: {
+	                required: true,
+	                maxlength:50
+	            }
+	        },
+	        messages: {
+	            firstname: {
+	                required: "Please enter your first name.",
+	                maxlength:"The first name exceeds maximum length of 50 characters."
+	            },
+	            lastname: {
+	                required: "Please enter your last name.",
+	                maxlength:"The last name exceeds maximum length of 50 characters."
+	            },
+	            address: {
+	                required: "Please enter your address.",
+	                maxlength:"The address exceeds maximum length of 200 characters."
+	            },
+	            zip: {
+	                required: "Please enter your zip.",
+	                maxlength:"The post code exceeds maximum length of 50 characters."
+	            },
+	            city: {
+	                required: "Please enter your city.",
+	                maxlength:"The city exceeds maximum length of 50 characters."
+	            },
+	            country: {
+	                required: "Please choose your country.",
+	                maxlength:"The country exceeds maximum length of 50 characters."
+	            },
+	            state: {
+	                required: "Please enter your County / Province / State.",
+	                maxlength:"The country exceeds maximum length of 50 characters."
+	            },
+	            phone: {
+	                required: "Please enter your phone.",
+	                maxlength:"The phone number exceeds maximum length of 50 characters."
+	            }
+	        }
+	    });
+	</script>
+	</body>
+
+</html>

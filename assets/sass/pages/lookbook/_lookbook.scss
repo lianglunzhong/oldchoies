@@ -1,0 +1,313 @@
+// --------------------------------------------------
+// lookbook
+// --------------------------------------------------
+
+.lookbook-list{ 
+	overflow:hidden; 
+	position:relative; 
+	margin-top:20px;
+	.row{ 
+		margin:0px;
+	}
+}
+.lookbook-box{ 
+	position:relative;
+	.lookbook-ul {
+		li.lookbook-item{
+		margin-right: 3.33334% !important;  
+		width:22.5%; 
+		margin-top: 1.5%; 
+		padding:0px;
+		&:nth-child(4n){ 
+			margin-right:0px !important;
+		}
+		@media (max-width: 767px) {
+			width:45%;
+			margin-right: 10% !important;
+		}
+		}
+	}
+}
+
+
+.outfit{
+	position: relative;
+	background: $gray-lighter;
+	&:hover {
+		box-shadow: 0px 0px 5px rgba(227, 227, 227, 0.8);
+	}
+	.viewport {
+		overflow: hidden; 
+		height:357px;
+		.products{
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+			-webkit-transition:max-height 300ms cubic-bezier(0.15, 0.07, 0.51, 0);
+			   -moz-transition:max-height 300ms cubic-bezier(0.15, 0.07, 0.51, 0);
+			     -o-transition:max-height 300ms cubic-bezier(0.15, 0.07, 0.51, 0);
+			        transition:max-height 300ms cubic-bezier(0.15, 0.07, 0.51, 0);
+			max-height:0;
+			&.expanded{
+				-webkit-transition-delay:0.6s;
+				   -moz-transition-delay:0.6s;
+				     -o-transition-delay:0.6s;
+				        transition-delay:0.6s;
+				max-height:130px
+			}
+			ul.product-list{
+				margin: 0;
+				li.product{
+					@include inline-block;
+					position:relative; 
+					margin:0 0 0 0;
+					a{ 
+						display:block;
+						img{
+							max-width:67px;
+						}
+					}
+				}
+			} 
+		}
+	}
+	a.gallery-overlay-trigger {
+		display: block; 
+		position: relative; 
+		text-align:center;
+		.outfit-image{
+			cursor:-webkit-zoom-in;
+			cursor:zoom-in
+		}
+	}
+	.meta-bar{
+		padding:5px 10px; 
+		overflow:hidden;
+		.meta-pro-name{ 
+			line-height:18px; 
+			text-align:center; 
+			height:36px; 
+			overflow:hidden; 
+			color:$gray-dark;
+		}
+		.meta-pro-botton{ 
+			margin-top:10px;
+		}
+	} 
+}
+ 
+.meta-sns,
+.meta-review,
+.meta-heart,
+.meta-sns:hover,
+.meta-review:hover,
+.meta-heart:hover,
+.meta-heart-on,
+.meta-sns1,
+.meta-sns2,
+.meta-sns3,
+.meta-sns4,
+.meta-sns1:hover,
+.meta-sns2:hover,
+.meta-sns3:hover,
+.meta-sns4:hover{ 
+	background:url(../images/lookbook-icon.png) no-repeat;
+	display:block;
+}
+.met-pc{width:20px; height:20px; @include float;}
+.meta-sns{ background-position:-115px 0;}
+.meta-review{ background-position:-142px 0;}
+.meta-heart{ background-position:-167px 0;}
+.meta-heart-on{ background-position:-167px -22px;}
+.meta-sns:hover{ background-position:-115px -22px;}
+.meta-review:hover{ background-position:-142px -22px;}
+.meta-heart:hover{ background-position:-167px -22px;}
+.meta-sns1{ background-position:0 0;}
+.meta-sns2{ background-position:-21px 0;}
+.meta-sns3{ background-position:-43px 0;}
+.meta-sns4{ background-position:-86px 0;}
+.meta-sns1:hover{ background-position:0px -22px;}
+.meta-sns2:hover{ background-position:-21px -22px;}
+.meta-sns3:hover{ background-position:-43px -22px;}
+.meta-sns4:hover{ background-position:-86px -22px;}
+
+.meta-sns-list{ 
+	position:relative; 
+	top:-27px; 
+	left:-8px;
+	background:$white;
+	border:1px solid $gray-light;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+	    -ms-border-radius:2px;
+	     -o-border-radius:2px;
+	border-radius:2px;
+	color:$gray-light;
+	cursor:text;
+	@include inline-block;
+	height:24px;
+	line-height:24px;
+	margin-left:5px;
+	text-align:center;
+	width:68px;
+	a{ 
+		margin:2px 0 0 2px;
+	}
+	.sc-b{
+		position: absolute; 
+		z-index: 2; 
+		width: 0; 
+		height: 0; 
+		line-height: 0; 
+		font-size: 0; 
+		border-width: 4px;
+		border-style: solid; 
+		border-color: $gray-light $gray-lighter $gray-lighter $gray-lighter;
+		bottom: -8px; 
+		left: 8px;
+	}
+}
+.loves-count{
+	font-size:$font-size-base;
+	position:relative;
+	background:$white;
+	border:1px solid $gray-light;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-ms-border-radius:2px;
+	-o-border-radius:2px;
+	border-radius:2px;
+	color:$gray;
+	cursor:text;
+	@include inline-block;
+	height:20px;
+	line-height:20px;
+	margin-left:5px;
+	text-align:center;
+	width:35px;
+	&:after{
+		border:solid transparent;
+		content:" ";
+		height:0;
+		width:0;
+		position:absolute;
+		pointer-events:none;
+		right:100%;
+		border-color:rgba(255,255,255,0);
+		border-width:4px;
+		top:50%;
+		border-right-color:$gray-light;
+		margin-top:-4px;
+	}
+}
+.lookbook-details{
+	.row{
+		background-color:$gray-lighter;	
+	}
+	.container{
+		.row{
+			padding:20px;
+		}
+	}
+	.con{
+		h4{
+			font-size:$font-size-large;
+			color: $gray-darker;
+		}
+		h2{
+			font-size:$font-size-h1;
+			color: $black;
+		}
+		.lookbook-share{
+			@include clearfix;
+			span{
+				display:block;
+				@include float;
+				line-height:32px; 
+				margin-right:10px;
+			}
+		}
+	}
+	.flexslider{
+		.col-sm-3{
+			padding:2px;
+		}
+	}
+}
+.reviews-sign{
+	font-size:$font-size-base;
+	.text{
+		width:80%;
+	}
+
+	h3 {
+		font-size: $font-size-base;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $gray-light;
+		margin-bottom: 15px;
+	}
+	.con li{ 
+		padding-bottom:10px; 
+		margin-bottom:15px; 
+		border-bottom:1px dashed $gray-light; 
+		
+		.time{ 
+			color:$gray-dark;
+		}
+		p{ 
+			margin-top:5px;
+		}
+	}	
+} 
+
+/* phone screen adaptation */
+@media (max-width: 767px) {
+	.lookbook-ul li.lookbook-item:nth-child(2n){ 
+		margin-right:0px !important;
+	}
+}
+@media (max-width: 1030px) {
+	.lookbook-ul{
+		.products,
+		.meta-pro-botton{
+			display:none;
+		}
+
+	}
+	.outfit .viewport{
+		height:auto;
+	} 
+}
+@media (max-width: 779px) {
+	.lookbook-details .pc-btn{
+		display: none;
+	}
+	.lookbook-details .phone-btn{
+		display:block;
+	}
+}
+@media (min-width: 780px) {
+	.lookbook-details .pc-btn{
+		display: block;
+	}
+	.lookbook-details .phone-btn{
+		display:none;
+	}
+}
+
+@media (max-width: 767px) {
+	.pc-btn{
+		display: none;
+	}
+	.phone-btn{
+		display:block;
+	}
+}
+@media (min-width: 768px) {
+	.pc-btn{
+		display: block;
+	}
+	.phone-btn{
+		display:none;
+	}
+}

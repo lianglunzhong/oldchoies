@@ -1,0 +1,284 @@
+.trial-winners{ 
+    margin:20px 0; 
+    border:4px solid $gray-light; 
+    font-size:14px; 
+    padding:20px 30px; 
+    text-align:center;
+    h3{ 
+        font-size:$font-size-large; 
+        font-weight:normal; 
+        text-transform:uppercase;
+        }
+    ul{ 
+        margin:20px 0 15px;
+        @include clearfix;
+        li{ 
+            word-wrap: break-word; 
+            word-break: normal; 
+            overflow:hidden; 
+            text-align:left;
+            }
+    }
+    .a-red{
+        color: $red;
+        text-decoration: underline;
+        &:hover{
+            @extend .a-red;    
+        }
+    }
+    }
+.report-details{ 
+    background:url(../images/freetrial/trial_pro_bg.jpg) repeat-x bottom; 
+    padding-bottom:25px; 
+    margin-bottom:30px;
+    .report-left{ 
+        position:relative;
+        .pro-img{ 
+            position:relative; 
+            overflow:hidden;
+            a{
+                display:block;
+                text-align: center;
+                img{
+                    text-align: center;
+                }
+            }
+            }
+        .pro-small{ 
+            margin:5px 0;
+            li{  
+                border:1px solid $white; 
+                position:relative; 
+                cursor:pointer;
+                padding:0;
+                &:hover{
+                    border-color:$red;    
+                }
+                a{
+                    display: block;
+                    text-align: center;
+                }
+            } 
+            li.current{
+                border-color:$red;
+            }
+            .pro-items{
+                position: relative;
+            }
+        }
+        .chances {
+            background: url(../images/freetrial/icon_chance.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+            display: inline-block;
+            height: 70px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 55px;
+            z-index: 1;
+        }
+        .chances1{ 
+            @extend .chances;
+            background-position:0 0;
+        }
+        .chances2{ 
+            @extend .chances;
+            background-position:0 -71px;
+        }
+        .chances3{ 
+            @extend .chances;
+            background-position:0 -141px;
+        }        
+    }
+    .report-right{
+        float:right;
+        h3{ 
+            font-size:$font-size-large; 
+            font-weight:normal; 
+            margin-bottom:15px;
+        }
+        @media screen and (max-width: 780px){
+            h3{
+                font-size:$font-size-base;
+                line-height: 1.5;
+                font-weight:bold;
+            }
+        }
+        dl{ 
+            font-size:$font-size-base;
+            dt{ 
+                height:30px; 
+                line-height:28px; 
+                font-weight:bold; 
+                color:$gray-dark; 
+                background-color:$gray-lighter; 
+                margin-bottom:15px;
+                .timeleft-box {
+                    strong{ 
+                        color:#D92628; 
+                        margin:0 5px 0 0; 
+                        font-size:18px;
+                    }
+                }
+            }
+            dd{ 
+                margin-bottom:15px;
+                .price{
+                    li{
+                        margin:5px 0;
+                        .f00{
+                            color:$red;
+                            margin-bottom:0 ;    
+                        }
+                        label{ 
+                             @include inline-block;  
+                            width:180px;
+                        }
+                        span{ 
+                             @include inline-block;  
+                            margin-right:10px;
+                            em{ 
+                                font-size:36px; 
+                                 @include inline-block; 
+                            }
+                        }    
+                    }
+                    li.m{ line-height:36px;}
+                }
+                .share{
+                    a{
+                        margin: 5px 0 0 5px;
+                        background: url(../images/themes-new.png) no-repeat;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .a1 {
+                        background-position: 0 -331px;
+                    }
+                    .a2 {
+                        background-position: -23px -331px;
+                    }
+                    .a3 {
+                        background-position: -46px -331px;
+                    }
+                }
+                dl{ 
+                    margin-bottom:20px; 
+                    font-size:$font-size-base; 
+                    line-height:20px;
+                }
+                dt{ 
+                    background:none; 
+                    margin:0; 
+                    font-weight:bold;
+                }
+                dd{ 
+                    margin:0; 
+                }
+            }
+        }
+    }
+}
+.trial-report{ 
+    background:url(../images/freetrial/trial_report.jpg) no-repeat left top; 
+    padding-left:38px;
+    h2{ 
+        font-size:24px; 
+        font-weight:normal; 
+        border-bottom:1px solid $gray-light; 
+        margin-bottom:15px; 
+        padding-bottom:5px;
+    }
+    .trial-report-listcon{
+        @include clearfix;
+        li{
+            padding-bottom:25px;
+            img{
+                margin-bottom:10px;
+            } 
+            h3{ 
+                font-size:14px;
+            }
+            .name{ 
+                display:block; 
+                margin:5px 0 10px; 
+                height:36px; 
+                overflow:hidden; 
+                &:hover{
+                    color:$gray-dark;
+                }
+            }   
+        }
+    }
+    .bottom{ 
+        text-align:right; 
+        text-transform:uppercase; 
+        height:30px; 
+        line-height:30px; 
+        background-color:#FCF2ED; 
+        padding:0 10px;
+        a {
+            font-size: $font-size-base;
+            font-weight: bold;
+            color: $red;
+        }
+    }
+}
+.trial-report-list {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 0;
+    .report-details{ 
+        background:none;
+        .right-top {
+            span{ 
+                color:$gray;
+            }
+            .price{ 
+                color:$gray-dark; 
+                margin:3px 0 15px;
+                a{
+                    margin-left:5%;
+                }
+            }
+        }
+        .right-trial{
+            .right-tit{ 
+                background:url(../images/freetrial/report_right_titbg.png) no-repeat top left; 
+                padding-top:9px;
+                h4{ 
+                    background-color:$gray-light; 
+                    height:30px; 
+                    line-height:30px; 
+                    padding-left:10px; 
+                    color:$gray-dark; 
+                    font-size:14px; 
+                    font-weight:bold;
+                }
+            }
+            .right-con{ 
+                padding:12px; 
+                border:1px solid $gray-light; 
+                border-top:0 none;
+                .right-con-t{ 
+                    margin-bottom:10px; 
+                    color:$red; 
+                    font-weight:bold;
+                    span{ 
+                        margin-right:15px;
+                    }
+                }
+                p{ 
+                    font-size:$font-size-base; 
+                    line-height:20px;
+                    img{ 
+                        margin:12px 0 0;
+                    }
+                }
+            }            
+        }
+    }
+}
+.tol-page{
+    font-size:$font-size-small ;
+}

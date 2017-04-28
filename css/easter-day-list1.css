@@ -1,0 +1,288 @@
+.homecoming-top{
+	width:1024px;
+	height:auto;
+	margin:0 auto;
+	}
+.homecoming-top p{
+	margin:0;
+	}
+
+.homecoming-top .homecoming-filter p.filter-instruction{
+	height:40px;
+	text-align:center;
+	background-color:#fce0e0;
+	border-top:1px solid #b48d8d;
+	font-size:16px;
+	line-height:40px;
+	color:#3f3f3f;
+	margin-bottom:0;	
+	}
+.homecoming-filter{
+	margin-bottom:30px;
+	}
+.homecoming-filter .filter-main{
+	background-image:url(../images/activity/homecoming-bj.jpg);
+	height:175px;
+	width:1024px;
+	position:relative;
+	}
+.homecoming-filter .filter-main li {
+    color: #757575;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height:160px;
+	line-height:220px;
+    text-align: center;
+	width:199px;
+	filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+.homecoming-filter .filter-main p {
+    height: 10px;
+    left: 242px;
+    overflow: hidden;
+	margin:0;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+	width:200px;
+	background:url(../images/activity/homecoming-point.jpg) no-repeat top center;
+	height:10px;
+}
+.homecoming-filter .filter-main li.current{
+	font-weight:bold;
+	font-size:15px;	
+	}
+.homecoming-filter .filter-main b {
+    display: inline-block;
+    font-size: 0;
+    height: 0;
+    margin-top:0;
+    overflow: hidden;
+    width: 0;
+}
+.fix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+
+/*以下为具体产品的样式，可参照分类页模板*/
+.pro-list ul {
+  margin-right: -30px;
+}
+
+.pro-item {
+  position: relative;
+  width: 240px;
+  height: 415px;
+  float: left;
+  margin: 20px 17px 20px 0;
+  background: #fff;
+  border: 1px solid #fff;
+}
+.pro-item .pic {
+  position: relative;
+  width: 240px;
+  height: 320px;
+}
+.pro-item .icon-fsale,
+.pro-item .icon-psale {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pro-item .icon-color {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 8px;
+  background-image: url(../images/activity/ico-color.png);
+}
+.pro-item .title {
+  height: 20px;
+  margin-top: 15px;
+  overflow: hidden;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'font963';
+}
+.pro-item .title a {
+  vertical-align: -1px;
+  color: #444;
+}
+.pro-item .title .icon-pick {
+  margin-right: 3px;
+}
+.pro-item .price {
+  margin: 0;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  font-family: 'font963';
+}
+.pro-item .price .priceold {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.pro-item .price .pricenew {
+    color: #d8271c;
+}
+
+.pro-item .btn-qv {
+  display: none;
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  height: 26px;
+  line-height: 26px;
+  background: #e5e5e5;
+  border: 1px solid #ededed;
+  text-align: center;
+  font-size: 14px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  cursor: pointer;
+}
+.pro-item .reviews {
+  text-align: center;
+  color: #aaa;
+  font-family: 'font035';
+  font-style: italic;
+}
+.pro-item .reviews .fa {
+  color: #ecb123;
+}
+.pro-item .add-wish {
+  display: none;
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  height: 15px;
+  text-align: right;
+}
+.pro-item .add-wish .fa {
+  color: #7f7f7f;
+  cursor: pointer;
+}
+.pro-item .add-wish .text {
+  display: none;
+  margin: -2px 0 0 0;
+  background: #fff;
+}
+.pro-item .add-wish .text span {
+  padding: 2px;
+  border-radius: 2px;
+  border: 1px solid #7f7f7f;
+}
+.pro-item .add-wish .text .fa {
+  margin-left: -1px;
+  color: #7f7f7f;
+}
+.pro-item .add-wish:hover .text {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.pro-item .overlay {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 415px;
+  background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.pro-item .sign-warp {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 165px;
+  left: 25px;
+  width: 190px;
+  height: 210px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+.pro-item .sign-warp .text {
+  margin: 50px 0 10px;
+  padding: 0 20px 0px 50px;
+  text-align: left;
+}
+.pro-item .sign-warp .wish {
+  margin: 10px 0;
+  font-size: 18px;
+  font-style: italic;
+}
+.pro-item .sign-warp .wish .fa {
+  margin-right: 5px;
+}
+.pro-item .sign-warp .link {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin: 5px 0;
+  color: #000;
+}
+.pro-item .sign-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+.pro-item.hover {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 5px rgba(227, 227, 227, 0.8);
+}
+.pro-item.hover .add-wish {
+  display: block;
+}
+.pro-item.hover .btn-qv {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.pager {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #444;
+}
+.pager .result {
+  margin-right: 15px;
+}
+.pager a {
+  margin: 0 3px;
+}
+.pager .selected {
+  margin: 0 3px;
+  color: #910000;
+  font-weight: 700;
+}
+.pager .fa {
+  margin: 0 3px;
+  vertical-align: -3px;
+  cursor: pointer;
+}

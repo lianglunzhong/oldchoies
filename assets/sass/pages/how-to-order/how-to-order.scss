@@ -1,0 +1,104 @@
+/*
+*@module: how to order 
+*@Author: zhangxi 2015-03-29
+*@Update: 
+*/ 
+article.top-follow {
+    p{
+        font-size:16px;
+        text-transform:capitalize;
+        font-weight:bold;
+        padding-top:25px;
+        padding:0 15px;
+    }
+}
+ .aside-active {
+     overflow: hidden;
+     position:fixed;
+     @include float(left);
+     width:18%;
+     min-height:1px;
+     padding:0 15px;
+     ul{
+         overflow:hidden;
+         margin-top:12px;
+         li{
+             height:50px;
+             margin-top:5px;
+             a{
+                 display:block;
+                 span{
+                     height:48px;
+                     width:48px;
+                     background:url(../images/how-to-order/btn-how-to-order2.jpg) no-repeat scroll 0 0;
+                     color:white;
+                     text-align:center;
+                     padding-top:15px;
+                     @include float(left);
+                     display: block;
+                 }
+                 p{
+                     @include float(left);
+                     display:block;
+                     margin-top:5px;
+                     color:$gray-dark;
+                 }
+             }
+         }
+         li.on{
+             a{
+                 span{
+                     background:url(../images/how-to-order/btn-how-to-order1.jpg) no-repeat scroll 0 0;
+                     display: block;
+                     height: 48px;
+                     width: 48px;
+                     @include float(left);
+                 }
+                 p{color:black;}
+             }
+         }
+     }
+}
+.main-how{
+    overflow:hidden;
+    position:relative;
+    @include float(right);
+    h1{
+        height:52px;
+        background:url(../images/how-to-order/line.jpg) no-repeat scroll left bottom; 
+        p{
+            color:black;
+            font-size:$font-size-base;
+            line-height:35px;
+            span.list-circle{
+                background:url(../images/how-to-order/list.jpg) no-repeat scroll 0 0;
+                height:40px;
+                width:35px;
+                display:block;
+                text-align:center;
+            }
+            span{@include float(left);}
+        }
+    }
+    @media screen and (max-width: 767px){
+        h1{
+            height:30px !important;
+            background:none !important;
+        }
+    }
+    p.tips{
+        color:$gray-dark;
+        font-size:$font-size-base;
+        margin:10px 0 0 10px;
+    }
+    img{
+        margin-top:10px;
+        display:block;
+    }
+}
+
+
+
+
+
+

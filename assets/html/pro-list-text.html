@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/jquery-1.8.2.min.js"></script>
+	</head>
+<body>
+	<div class="page">
+		<header id="pc-header" class="site-header hidden-xs">
+			<div class="n-nav-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-5 col-md-5 col-lg-4">
+							<div class="drop-down JS-show mr10">
+                                <div class="drop-down-hd">
+                                	USD
+                                    <i class="fa fa-caret-down flr"></i>    
+                                </div>
+                                <ul class="drop-down-list JS-showcon hide" style="display:none;">
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">GBP</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">EUR</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">NOK</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">CAD</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">AUD</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">CHF</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">SEK</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">PLN</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">RUB</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">DKK</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">TWD</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">JPY</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">HKD</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="drop-down JS-show">
+                                <div class="drop-down-hd">
+                                	English
+                                    <i class="fa fa-caret-down"></i>    
+                                </div>
+                                <ul class="drop-down-list JS-showcon hide" style="display:none;">
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">Español</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">Deutsch</a>
+                                    </li>
+                                    <li class="drop-down-option" onclick="'">
+                                        <a  href="">Français</a>
+                                    </li>
+                                </ul>
+                            </div>
+						</div>
+						<div class="col-xs-2 col-md-2 col-lg-4 n-logo">
+							<a href="/" title="choies"><img src="../images/2016/logo.png"></a>
+						</div>
+						<div class="col-xs-5 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-0">
+							<div class="n-search fll">
+                                <form action="/search" method="get" id="search_form" onsubmit="return search(this);">
+                                    <ul>
+                                        <li>
+                                        	<a class="search-btn" href="javascript:void()"><i class="fa fa-search"></i></a>
+                                        	<a class="search-btn-lg" href="javascript:void()"  style="display:none;"><i class="fa fa-search" ></i></a>
+                                            <input id="boss" name="searchwords" value="dress" class="search-text text" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value=='Search'){this.value='';};" type="search">
+                                            <span class="search-close"  style="display:none;"></span>
+                                        </li>  
+                                    </ul>
+                                </form>
+							</div>
+							<div class="reg-sin fll">
+								<div id="customer_sign_in" class="out">
+									<a href="">Register</a>
+									<span>/</span>
+									<a href="">Sign In</a>
+								</div>
+								<div id="customer_signed" class="drop-down JS-show hide" style="display: none;">
+	                                <div class="drop-down-hd">
+	                                	<span id="username"></span> 
+	                                </div>
+	                                <ul class="drop-down-list JS-showcon hide" style="display: none;">
+	                                    <li class="drop-down-option" onclick="'">
+	                                        <a id="my_order" href=""></a>
+	                                    </li>
+	                                    <li class="drop-down-option" onclick="'">
+	                                        <a href="">Track Order </a>
+	                                    </li>
+	                                    <li class="drop-down-option" onclick="'">
+	                                        <a href="">My Wishlist </a>
+	                                    </li>
+	                                    <li class="drop-down-option" onclick="'">
+	                                        <a href="">My Profile </a>
+	                                    </li>
+	                                    <li class="drop-down-option" onclick="'">
+	                                        <a href="">Sign Out</a>
+	                                    </li>
+	                                </ul>
+	                            </div>
+							</div>
+							<div class="m-mybag drop-down JS-show">
+								<div class="drop-down-hd">
+									<a class="bag-bg" href="">3</a>
+								</div>
+								<div class="mybag-box JS-showcon hide" style="display:none;">
+									<span class="arrow-up"></span>
+									<div class="mybag-con">
+										<p class="title">1 ITEM IN MY BAG</p>
+										<div class="items">
+											<ul>
+												<li>
+													<a class="mybag-pic" href="">
+														<img src="../images/3.jpg" alt=""></a>
+													<div class="mybag-info">
+														<a class="mybag-info-name" href="">Black PU High Waist Pleat Skirt</a>
+														<span>
+															<b>colour:</b> Natural
+														</span>
+														<span><b>Size:</b> M</span>
+														
+														
+														<span><b>QTY:</b> 1</span>
+														<span>
+															<b>Price:</b> $47.99 <em class="red">10%off</em>
+														</span>
+														<span class="cart-delete">REMOVE</span>
+													</div>
+													
+												</li>
+												<li>
+													<a class="mybag-pic" href="">
+														<img src="../images/3.jpg" alt=""></a>
+													<div class="mybag-info">
+														<a class="mybag-info-name" href="">Black PU High Waist Pleat Skirt</a>
+														<span>
+															<b>colour:</b> Natural
+														</span>
+														<span><b>Size:</b> M</span>
+														
+														
+														<span><b>QTY:</b> 1</span>
+														<span>
+															<b>Price:</b> $47.99 <em class="red">10%off</em>
+														</span>
+														<span class="cart-delete">REMOVE</span>
+													</div>
+													
+												</li>
+												<li>
+													<a class="mybag-pic" href="">
+														<img src="../images/3.jpg" alt=""></a>
+													<div class="mybag-info">
+														<a class="mybag-info-name" href="">Black PU High Waist Pleat Skirt</a>
+														<span>
+															<b>colour:</b> Natural
+														</span>
+														<span><b>Size:</b> M</span>
+														
+														
+														<span><b>QTY:</b> 1</span>
+														<span>
+															<b>Price:</b> $47.99 <em class="red">10%off</em>
+														</span>
+														<span class="cart-delete">REMOVE</span>
+													</div>
+													
+												</li>
+											</ul>
+										</div>
+										<div class="cart-all-goods">
+											<p> TOTAL:<strong> $180.00</strong></p>
+											<span>(INCL.VAT)</span>
+										</div>
+										<div class="view-check">
+											<a href="#" class="btn btn-default btn-lg">VIEW BAG & CHECKOUT</a>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="mybag-box JS-showcon hide" style="display:none;" >
+									<span class="arrow-up"></span>
+									<div class="mybag-con">
+										<p class="title">NO ITEMS IN MY BAG</p>
+										<p class="title">
+											TOTAL 0.00$
+										</p>
+									</div>
+								</div> -->
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="n-nav">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<nav id="nav1" class="nav">
+								<ul>
+									<li class="JS-show p-hide">
+										<a href="#">NEW IN</a>
+										<div class="nav-list JS-showcon hide">
+											<span class="downicon tpn01"></span>
+											<div class="nav-box">
+												<div class="nav-list01 fll">
+													<dl class="nav-ul">
+														<dt class="title">SHOP BY</dt>
+														<dd><a href=""> This Week</a></dd>
+														<dd><a href=""> Last Week</a></dd>
+														<dd><a href=""> Last Month</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list02 fll">
+													<a href=""><img src="../images/2016/temp01.jpg"></a>
+												</div>	
+											</div>
+										</div>
+									</li>
+									<li class="JS-show">
+										<a href="#">CLOTHING</a>
+										<div class="nav-list JS-showcon hide" style="margin-left:-100%;">
+											<span class="downicon tpn02"></span>
+											<div class="nav-box">
+												<div class="nav-list03 fll">
+													<dl class="nav-ul01">
+														<dt class="title">SHOP BY CATEGORY</a></dt>
+														<dd><a href=""> All Clothing</a></dd>
+														<dd><a href=""> Jeans</a></dd>
+														<dd><a href=""> Dresses</a></dd>
+														<dd><a href=""> Pants & Leggings</a></dd>
+														<dd><a href=""> Tops</a></dd>
+														<dd><a href=""> Shorts</a></dd>
+														<dd><a href=""> Coats</a></dd>
+														<dd><a href=""> Skirts</a></dd>
+														<dd><a href=""> Sweaters & Knits</a></dd>
+														<dd><a href=""> Swimwear & Beachwear</a></dd>
+														<dd><a href=""> Suits & Co-ords</a></dd>
+														<dd><a href=""> Sleepwear</a></dd>
+														<dd><a href=""> Rompers & Jumpsuits</a></dd>
+														<dd><a href=""> Clothing Accessories</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list04 fll">
+													<dl class="nav-ul col-xs-4 w5">
+														<dt class="title">SHOP BY COLLECTION</dt>
+														<dd><a href=""> Denim</a></dd>
+														<dd><a href=""> Ballerina Sportsluxe</a></dd>
+														<dd><a href=""> Party Dresses</a></dd>
+														<dd><a href=""> Music Festivals</a></dd>
+														<dd><a href=""> Boho Chic</a></dd>
+													</dl>
+													<a class="col-xs-8" href=""><img src="../images/2016/temp02.jpg"></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="JS-show">
+										<a href="#">SHOES</a>
+										<div class="nav-list JS-showcon hide" style="margin-left:-200%;">
+											<span class="downicon tpn03"></span>
+											<div class="nav-box">
+												<div class="nav-list03 fll">
+													<dl class="nav-ul01">
+														<dt class="title">SHOP BY CATEGORY</a></dt>
+														<dd><a href=""> All Shoes</a></dd>
+														<dd><a href=""> Shoe Accessories</a></dd>
+														<dd><a href=""> Flats</a></dd>
+														<dd><a href=""> Lace Up Shoes</a></dd>
+														<dd><a href=""> Sandals</a></dd>
+														<dd><a href=""> Heels</a></dd>
+														<dd><a href=""> Platforms</a></dd>
+														<dd><a href=""> Boots</a></dd>
+														<dd><a href=""> Sports Shoes</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list04 fll">
+													<a href=""><img src="../images/2016/temp20.jpg"></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="JS-show">
+										<a href="#">ACCESSORIES</a>
+										<div class="nav-list JS-showcon hide" style="margin-left:-300%;">
+											<span class="downicon tpn04"></span>
+											<div class="nav-box">
+												<div class="nav-list03 fll">
+													<dl class="nav-ul01">
+														<dt class="title">SHOP BY CATEGORY</a></dt>
+														<dd><a href=""> All Accessories</a></dd>
+														<dd><a href=""> Scarves</a></dd>
+														<dd><a href=""> Bags & Wallets</a></dd>
+														<dd><a href=""> Gloves</a></dd>
+														<dd><a href=""> Spring Accessories</a></dd>
+														<dd><a href=""> Socks & Tights</a></dd>
+														<dd><a href=""> Hats</a></dd>
+														<dd><a href=""> Hair Accessories</a></dd>
+														<dd><a href=""> Jewelry</a></dd>
+														<dd><a href=""> iPhones & iPads</a></dd>
+														<dd><a href=""> Sunglasses</a></dd>
+														<dd><a href=""> Belts</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list04 fll">
+													<a href=""><img src="../images/2016/temp21.jpg"></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="JS-show">	
+										<a href="#">BEAUTY</a>
+										<div class="nav-list JS-showcon hide" style="margin-left:-400%;">
+											<span class="downicon tpn05"></span>
+											<div class="nav-box">
+												<div class="nav-list01 fll">
+													<dl class="nav-ul">
+														<dd><a href=""> Beauty</a></dd>
+														<dd><a href=""> Hair</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list02 fll">
+													<a href=""><img src="../images/2016/temp22.jpg"></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="JS-show p-hide">
+										<a href="#">THE CHOIES FEATURE</a>
+										<div class="nav-list JS-showcon hide" style="margin-left:-500%;">
+											<span class="downicon tpn06"></span>
+											<div class="nav-box">
+												<div class="nav-list01 fll">
+													<dl class="nav-ul">
+														<dd><a href=""> Lookbooks</a></dd>
+														<dd><a href=""> The Holiday Shop</a></dd>
+														<dd><a href=""> Music Festival Shop</a></dd>
+														<dd><a href=""> Party Dresses Shop</a></dd>
+													</dl>
+												</div>
+												<div class="nav-list02 fll">
+													<a href=""><img src="../images/2016/temp23.jpg"></a>
+												</div>	
+											</div>
+										</div>
+									</li>
+									<li >
+										<a href="#" class="sale">SALE</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="site-content">
+			<div class="main-container clearfix">
+				<div class="container">
+					<div class="pro-list">
+						<ul class="row" id="product_ul">
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+														<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg" src="../images/CSZY2655.jpg" alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							<li class="pro-item col-xs-6 col-sm-3">
+								<div class="overlay"></div>
+								<div class="pic">
+									<a href="">
+										<img class="lazy" data-original="../images/CSZY2655.jpg"  alt="">
+									</a>
+									<i class="icon icon-fsale"></i>
+									<i class="icon icon-psale"></i>
+									<span class="icon-color"></span>
+									<span class="icon-rshipped"></span>
+								</div>
+								<div class="title">
+									<a href=""><i class="myaccount"></i>White Lace Panel Half Puff Sleeve Shift Dress</a>
+								</div>
+								<p class="price">
+									 <span class="priceold">$88.88</span>
+									 <span class="pricenew">$44.44</span>
+								</p>
+								<div class="star">
+									<div class="reviews">
+										<a href="">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-half"></i>
+											(34)
+										</a>
+									</div>	
+								</div>
+								<a href="#" class="btn-qv" data-reveal-id="myModal">Quick View</a>
+								<div class="add-wish">
+									<a href="">
+										<i class="fa fa-heart red"></i>
+									</a>
+								</div>
+								<span class="outstock">Sold Out</span>
+							</li>
+							
+
+						</ul>
+					</div>
+					<!--
+					<ul class="pagination flr hidden-xs">
+				        <li class="disabled"><a href="#">« PRE</a></li>
+				        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+				        <li><a href="#">2</a></li>
+				        <li><a href="#">3</a></li>
+				        <li><a href="#">4</a></li>
+				        <li><a href="#">5</a></li>
+				        <li><a href="#">NEXT »</a></li>
+				    </ul>
+				    <ul class="pagination-mobile flr visible-xs-inline hidden-sm hidden-md hidden-lg">
+				        <li><a href="#">« PRE</a></li>
+				        <li><span>Page 2 / Total 22</span></li>
+				        <li><a href="#">NEXT »</a></li>
+				    </ul>
+				    -->
+				</div>
+			</div>
+		<!-- lazyload-12-14 -->
+		<script type="text/javascript" charset="utf-8" src="../js/lazyload-12-14.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/scrollstop.js"></script>
+		<script>
+		    $("img.lazy").lazyload({
+		        event: "scrollstop"
+		    });
+		</script>	
+		</div>
+		<footer>
+			<div class="w-top container-fluid">
+				<div class="container">
+					<div class="currency visible-xs-block hidden-sm hidden-md hidden-lg xs-mobile">
+						<div class="row">
+							<div class="currency-con">
+								<dl class="col-xs-12 hidden-sm hidden-md hidden-lg xs-mobile object-sites">
+									<dt><a href="#">GERMAN SITE&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FRENCH SITE</a></dt>
+									<dt><a href="#">SPANISH SITE&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RUSSIAN SITE</a></dt>
+							    </dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-usd" href="#">US Dollar</a> </dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-gbp" href="#">Pound Sterling</a>
+									</dd>
+								</dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-eur" href="#">Euro</a>
+									</dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-cad" href="#">Canadian Dollar</a>
+									</dd>
+								</dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-aud" href="#">Australian Dollar</a>
+									</dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-brl" href="#">Brazil Reais</a>
+									</dd>
+								</dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-pln" href="#">Polish Zloty</a>
+									</dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-mxn" href="#">Mexican Peso</a>
+									</dd>
+								</dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-dkk" href="#">Danish Krona</a>
+									</dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-sar" href="#">Saudi Arabian Riyal</a>
+									</dd>
+								</dl>
+								<dl class="sites col-xs-12">
+									<dd class="col-xs-6"><a class="icon-flag icon-jpy" href="#">Japanese Yen</a>
+									</dd>
+									<dd class="col-xs-6"><a class="icon-flag icon-hkd" href="#">Hongkong Dollar</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="fix row">
+						<dl class="hidden-xs col-sm-2">
+							<dt>MY ACCOUNT</dt>
+							<dd><a href="#">Track Order</a>
+							</dd>
+							<dd><a href="#">Order History</a>
+							</dd>
+							<dd><a href="#">Account Setting</a>
+							</dd>
+							<dd><a href="#">Points History</a>
+							</dd>
+							<dd><a href="#">Wish List</a>
+							</dd>
+							<dd><a href="#">VIP Policy</a>
+							</dd>
+							<dd><a onclick="return feed_show();">Feedback</a>
+							</dd>
+						</dl>
+						<dl class="hidden-xs col-sm-2">
+							<dt>HELP INFO</dt>
+							<dd><a href="#">FAQ</a>
+							</dd>
+							<dd><a href="#">Contact Us</a>
+							</dd>
+							<dd><a href="#">Payment</a>
+							</dd>
+							<dd><a href="#">Coupon &amp; Points</a>
+							</dd>
+							<dd><a href="#">Shipping &amp; Delivery</a>
+							</dd>
+							<dd><a href="#">Returns &amp; Exchange</a>
+							</dd>
+							<dd><a href="#">Conditions of Use</a>
+							</dd>
+						</dl>
+						<dl class="hidden-xs col-sm-2">
+							<dt>FEATURED</dt>
+							<dd><a href="#">Lookbook</a>
+							</dd>
+							<dd><a href="#">Free Trial</a>
+							</dd>
+							<dd><a href="#">Flash Sale</a>
+							</dd>
+							<dd><a href="#">Wholesale</a>
+							</dd>
+							<dd><a href="#">Affiliate Program</a>
+							</dd>
+							<dd><a href="#">Blogger Wanted</a>
+							</dd>
+							<dd><a class="red" href="#">Rate &amp; Win $100</a>
+							</dd>
+						</dl>
+						<dl class="hidden-xs col-sm-2">
+							<dt>ALL SITES</dt>
+							<dd><a href="#">English Site</a>
+							</dd>
+							<dd><a href="#">Spanish Site</a>
+							</dd>
+							<dd><a href="#">French Site</a>
+							</dd>
+							<dd><a href="#">German Site</a>
+							</dd>
+						</dl>
+						<dl class="col-xs-12 col-sm-4 xs-mobile">
+							<dt class="hidden-xs">Connect</dt>
+							<dl class="sns">
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns1"></a>
+								</dd>
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns2"></a>
+								</dd>
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns3"></a>
+								</dd>
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns4"></a>
+								</dd>
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns6"></a>
+								</dd>
+								<dd>
+									<a rel="nofollow" href="#" target="_blank" class="sns7"></a>
+								</dd>
+							</dl>
+							<dl class="letter">
+								<form action="" method="post" id="letter_form">
+									<label class="hidden-xs">SIGN UP FOR OUR EMAILS</label>
+									<div>
+										<input id="letter_text" class="text" value="Email Address" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value=='Email Address'){this.value='';};" type="text">
+										<input id="letter_btn" value="Submit" class="btn btn-primary" type="submit">
+									</div>
+								</form>
+							</dl>
+							<div class="red" id="letter_message"></div>
+						
+						</dl>
+						<dl class="col-xs-12 hidden-sm hidden-md hidden-lg xs-mobile object-insert">
+							<dt><a href="#">MY ACCOUNT&nbsp;&bull;</a><a href="#">&nbsp;TRACK ORDER&nbsp;&bull;</a><a href="#">&nbsp;ORDER HISTORY</a></dt>
+						</dl>
+						<dl class="col-xs-12 hidden-sm hidden-md hidden-lg xs-mobile object-insert">
+							<dd><a href="#">LOOK BOOKS&nbsp;&bull;</a><a href="#">&nbsp;VIP POLICY&nbsp;</a>
+							</dd>
+						</dl>
+						
+					</div>
+					<div class="card  hidden-xs container">
+						<p class="paypal-card container">
+							<img usemap="#Card" src="../images/card.jpg">
+							<map id="Card" name="Card">
+								<area target="_blank" href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&dn=www.choies.com&lang=en" coords="88,2,193,62" shape="rect">
+							</map>
+						</p>
+					</div>
+					<div class="copyright visible-xs-block hidden-sm hidden-md hidden-lg">
+						<p>Copyright © 2006-2015 Choies.com </p>
+						<dl class="col-xs-12 hidden-sm hidden-md hidden-lg xs-mobile object-insert">
+							<a href="#">About Us&nbsp;&bull;</a><a href="#">&nbspContact Us&nbsp;&bull;</a><a href="#">&nbsp;Conditions of Use&nbsp;&bull;</a><a href="#">&nbsp;Privacy&Security</a>
+						</dl>
+					</div>
+				</div>
+				<div class="copyr hidden-xs">
+					<p class="bottom container-fluid">Copyright © 2006-2015 Choies.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="color: #ccc;" href="#">Privacy &amp; Security</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="color: #ccc;" href="#">About Choies</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<div id="gotop" class="hide ">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+	</div>
+	<!-- JS-popwincon1 -->
+	<div id="myModal" class="reveal-modal xlarge">
+		<a class="close-reveal-modal close-btn3"></a>
+		<div>
+			<div class="pro-left">
+				<div id="myImagesSlideBox">
+					<div class="myImages">
+						<a href="#" id="myImgsLink" class="JS-zoom">
+							<img alt="Black And White Plaid Long Sleeve Shirt" src="https://www.choies.com/pimages1/159755/2.jpg" id="picture" class="myImgs" big="#" width="420">
+						</a>
+					</div>
+					<div id="scrollable" class="flr">
+						<a href="#" class="b-prev prev3"></a>
+						<a href="#" class="b-next next3"></a>
+						<div class="items">
+							<div class="scrollableDiv">
+								<a>
+									<img src="https://www.choies.com/pimages1/159760/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159755/2.jpg" bigimg="https://www.choies.com/pimages1/159755/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159760/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159760/2.jpg" bigimg="https://www.choies.com/pimages1/159760/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159759/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159759/2.jpg" bigimg="https://www.choies.com/pimages1/159759/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159759/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159759/2.jpg" bigimg="https://www.choies.com/pimages1/159759/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159757/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159757/2.jpg" bigimg="https://www.choies.com/pimages1/159757/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159756/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159756/2.jpg" bigimg="https://www.choies.com/pimages1/159756/2.jpg">
+								</a>
+								<a>
+									<img src="https://www.choies.com/pimages1/159761/3.jpg" alt="Black And White Plaid Long Sleeve Shirt" imgb="https://www.choies.com/pimages1/159761/2.jpg" bigimg="https://www.choies.com/pimages1/159761/2.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pro-right" id="quickView" style="width:400px;">
+				<dl>
+					<dd>
+						<h3>Black And White Plaid Long Sleeve Shirt</h3>
+						<div class="pro-stock">
+							<span class="stock-sp" id="stock">In Stock</span>
+							<span class="stock-sp" style="display: none;" id="outstock" class="hide">Out Of Stock</span>
+							Item# : <span id="product_sku">CSPY1462</span>
+							<strong>
+								<a href="https://www.choies.com/product/black-and-white-plaid-long-sleeve-shirt_p32368" id="product_link">View Full details</a>
+							</strong>
+						</div>
+					</dd>
+					<dd>
+						<p class="price">
+							<del>$19.99</del>
+							<span class="red">$16.90</span>
+							<i class="red">15% off</i>
+						</p>
+					</dd>
+					<dd class="last">
+						<div class="reviews">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half"></i>
+							(34)
+						</div>
+						<div id="action_form">
+							<form action="#" method="post" id="formAdd">
+								<div class="btn-size" style=" margin-top:20px;">
+									<div class="selected-box">
+	                                    <p class="fll">
+	                                        <span id="select_size">Size: L</span> <span class="selected"></span>
+	                                        <span id="only_left" class="red">&nbsp;</span>
+	                                    </p>
+	                                </div>
+									<input name="attributes[Size]" value="" class="s-size" type="hidden">
+									<div class="clearfix">
+										<ul class="size-list">
+                                            <li id="S" class="btn-size-normal JS-show" data-attr="S">
+                                    			<span>S</span>
+                                        	</li>
+                                        	<li id="M" class="btn-size-normal JS-show" data-attr="M">
+                                    			<span>M</span>
+                                        	</li>
+                                        	<li id="L" class="btn-size-normal JS-show" data-attr="L">
+                                    			<span>L</span>
+                                        	</li>
+                                        </ul>
+										<span class="size-charts JS-popwinbtn2">Size Charts</span>
+									</div>
+								</div>
+								<div class="btn_color"></div>
+								<div class="btn_type"></div>
+								<div class="total">
+									<input class="btn btn-primary btn-lg" id="addCart" value="ADD TO BAG" type="">
+									<a href="#" class="wishlist">my wishlist  (<span id="wishlists">75</span>Add)</a>
+									<div style="height:20px;">
+                                    	<div class="add-success" style="display:none"><i class="fa fa-check"></i>Item Added to Bag!</div>
+                                    </div>
+								</div>
+							</form>
+						</div>
+						<ul class="JS-tab-view detail-tab two-bor" style="margin-top:30px;">
+							<li class="dt-s1 current">DETAILS</li>
+							<li class="dt-s1">DELIVERY</li>
+							<li class="dt-s1">CONTACT</li>
+							<p style="left: 0px;"><b></b></p>
+						</ul>
+						<div class="JS-tabcon-view detail-tabcon">
+							<div class="bd" id="tab-detail">
+								<br>
+								<br>
+								<p>S:Shoulder:37cm,Bust:98cm,Length:62cm,Sleeve Length:55cm
+									<br> M:Shoulder:38cm,Bust:102cm,Length:63cm,Sleeve Length:56cm
+									<br> L:Shoulder:39cm,Bust:106cm,Length:64cm,Sleeve Length:57cm
+									<br>
+								</p>
+								<br>
+								<br>
+								<p>Non-stretchable Material
+									<br> Cotton
+									<br> Wash according to instructions on care label.</p>
+							</div>
+							<div class="bd hide">
+								<p style="color:#F00;">Receiving time = Processing time（3-5 working days）+ Shipping time</p>
+								<h4>Shipping:</h4>
+								<p>(1) Free shipping worldwide (10-15 working days)</p>
+								<p style="color:#F00; padding-left:18px;">No minimum purchase required.</p>
+								<p>(2) $ 15 Express Shipping(4-7 working days)</p>
+								<p style="padding-left:18px;">Check details in <a target="_blank" class="red" href="" title="Shipping &amp; Delivery">Shipping &amp; Delivery</a>.</p>
+								<h4>Return Policy:</h4>
+								<p>Not satisfied with your order, you can contact us and return it in 60 days. </p>
+								<p>For <span class="red">Swimwear and Underwear</span>, if there is no quality problem, we do not offer return &amp; exchange service, please understand. Check details in 
+									<a target="_blank" class="red" href=""title="return policy">return policy</a>
+								</p>
+								<h4>Extra Attention:</h4>
+								<p>Orders may be subject to import duties, if you want to avoid being charged for extra tax by your local custom, please contact us, we will use HongKong Post.</p>
+							</div>
+							<div class="bd hide">
+								<div class="ml10 mt10">
+									<a href="#" onclick="psSMPPow(); return false;">
+										<img name="psSMPPimage" src="https://www.choies.com/images/livechat_online1.gif" border="0">LiveChat
+									</a>
+								</div>
+								<div class="ml10 mt10">
+									<a href="mailto:service@choies.com">
+										<img src="../images/livemessage.png" alt="Leave Message"> Leave Message
+									</a>
+								</div>
+								<div class="ml10 mt10">
+									<a href="/faqs" target="_blank">
+										<img src="../images/faq.png" alt="FAQ"> FAQ
+									</a>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type: "POST",
+            url: "http://127.0.0.1/ajax_test.php",
+            dataType: "json",
+            data: "product_ids=1&b=2&user=aaaa",
+            success: function(res){
+            	if(res['logged_in']==1)
+                {
+                	$("#customer_sign_in").hide();
+                    $("#customer_signed").show();
+                    $("#customer_signed #username").html(res['firstname']);
+                    $("#customer_signed #my_order").html(res['price'])
+                } else if(res['logged_in']==0)
+                {
+                	$("#customer_sign_in a").attr('href','http://keleyi.com');
+                } 
+            }
+		})
+    })
+	// 分类产品信息加载 --- wanglong 2015-12-17
+	</script>
+	<script src="../js/common.js"></script>
+	<script src="../js/slider.js"></script>
+</body>
+</html>

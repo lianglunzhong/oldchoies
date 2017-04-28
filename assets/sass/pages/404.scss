@@ -1,0 +1,94 @@
+.searchon-wp{ 
+    border:1px solid #e7e7e7; 
+    background-color:#f5f5f6; 
+    padding:15px 0 40px; 
+    margin-bottom:50px;
+    @media screen and (max-width: 767px){
+        padding:15px 0 180px; 
+    }   
+    .searchon-404 {
+        text-align: center;
+        h1{ 
+            font-size:32px; 
+            font-weight:normal; 
+            margin:0 0 25px;
+        }
+        .font24{ 
+            line-height:40px;
+            font-size: 24px
+        }
+        .mt50{
+            margin-top:50px;
+        }
+        p.ss{font-size:24px;}
+        @media screen and (max-width: 767px){
+            p.ss{font-size:14px;font-weight:bold;}
+            h1{font-size:26px;line-height:30px;}
+        }   
+        p.b{ 
+            font-size:$font-size-base; 
+            font-weight:bold; 
+            margin:20px 0;
+            b{
+                font-size:$font-size-large;
+            }
+        }
+        .text-upper{
+            margin-bottom:20px;
+        }
+        a.b{ 
+            font-weight:bold; 
+            text-decoration:underline; 
+            text-transform:uppercase;
+        }
+    }
+    .banner-404{ 
+        margin:20px 0 0; 
+        background:url("../images/404/not_found_b.png") no-repeat; 
+        height:120px;
+        img{
+            @include float(left);
+            margin-right:5%;
+        }
+        .left{ 
+            float:left; 
+            margin-top:60px;
+            b{ 
+                text-transform:uppercase; 
+                margin-bottom:10px; 
+                font-weight:bold;
+            }
+            .text{ 
+                height:24px; 
+                line-height:24px; 
+                color:#a2a2a2; 
+                border:1px solid #c7c7c7; 
+                margin-right:5px; 
+                vertical-align:middle;
+            }
+            .btn{ 
+                display:inline-block; 
+                height:22px; 
+                line-height:22px; 
+                color:#fff; 
+                background-color:#202020; 
+                padding:0 10px; 
+                text-transform:uppercase; 
+                vertical-align:middle;
+                margin-top:2px;
+            }
+        }
+        .right{ 
+            float:left; 
+            margin-top:65px; 
+            text-transform:uppercase;
+            b{ 
+                text-decoration:underline; 
+                margin-top:5px; 
+                display:block;
+            }
+        }
+    }
+}
+
+

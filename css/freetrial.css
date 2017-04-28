@@ -1,0 +1,113 @@
+/********** product_image CSS Document **********/
+.scrollableDiv{width: auto;}
+.chance1,.chance2,.chance3{z-index:1000;position:absolute; left:256px; top:0px; width:54px; height:69px; background:url(../images/freebie/icon_chance.png) no-repeat;}
+.chance2{ background-position:0 -70px;}
+.chance3{ background-position:0 -140px;}
+.myImagesSlideBox{
+	float: left;
+	width: auto;
+	height: auto;
+	clear: both;
+	margin:10px 20px 20px 0;
+}
+.myImages2{width:324px;height:432px; margin-bottom:3px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.myImages2 img{width:323px;height:430px;border:0;}
+.myImgs {display:none;}
+/*  wrapper element  */
+#scrollable {height: 140px;}
+.smallimg {position: relative;clear: both;}
+.smallimg img {
+	width:105px; height:140px;
+	border:#FFF 1px solid;
+	margin-right:2px;
+	position: relative;
+	cursor: pointer;
+}
+.smallimg img:hover{ border-color:#F69;}
+/*遮罩层*/
+#BigDiv{
+	filter:alpha(opacity=30); /* IE */
+	-moz-opacity:0.3; /* Moz + FF */
+	opacity: 0.3; /* 支持CSS3的浏览器（FF 1.5也支持）*/ 
+	background: #777; position: absolute; top: 0; left: 0; z-index: 10000; display:none;}
+#MyDiv{background:#FFF; display:none; position:absolute; text-align:center; width:300px; height:390px; z-index:10001;}
+.closeMyDiv{position:absolute; right:4px; top:2px; z-index:10002;}
+.closeMyDiv a{text-decoration:none; cursor:pointer; color:#000;}
+.closeMyDiv a:hover{color:#F60}
+/********** product_image CSS End **********/
+
+/********** info CSS Document *********/
+.orange{ font-weight:bold; color:#F30;}
+.info{ width:472px;}
+.info p{font:13px/18px Tahoma, Geneva, sans-serif; padding:0 6px;}
+.info h1 a{ font:18px/38px Tahoma, Geneva, sans-serif; margin-bottom:4px; color:#000;}
+.info h5,.h5{ font:bold 14px/30px Tahoma, Geneva, sans-serif; color:#999; background:#f2f2f2; text-transform:uppercase; padding:0 5px; margin-bottom:8px;}
+
+*{margin:0;padding:0;list-style-type:none;}
+.timeleft{}
+.timeleft div{font:bold 11px/30px; Tahoma, Geneva, sans-serif; width:300px; text-transform:none; color:#333;}
+.timeleft div strong{font-size:18px; margin:0px; color:#F30;}
+#daoend{width:324px;color:#F30;font-size:18px;}
+
+.price{ clear:both; height:auto;padding:0px 5px;}
+.price div{ width:100px; float:left; font-size:13px; line-height:20px;}
+.price span{ line-height:38px;}
+.btn_free{ width:184px; height:36px; background:url(../images/freebie/icon.png) no-repeat; margin-bottom:15px;}
+.btn_free:hover{background:url(../images/freebie/icon.png) 0 -36px no-repeat;}
+.btn_buy{ width:107px; height:29px; background:url(../images/freebie/icon.png) 0 -72px  no-repeat; margin-bottom:15px;}
+.btn_buy:hover{background:url(../images/freebie/icon.png) 0 -102px no-repeat;}
+.hr{ width:820px; height:10px; background:url(../images/freebie/icon.png) 0px -144px repeat-x;}
+/********** info CSS End **********/
+
+/********** Report CSS Document *********/
+.tag{ width:30px; height:204px; background:url(../images/freebie/icon.png) 0 -196px no-repeat;}
+.report h3{ font-size:24px; width:770px; padding:5px; border-bottom:#000 1px solid;}
+.report p{font:13px/18px Tahoma, Geneva, sans-serif; margin:2px 0;}
+.report ul{width:774px; margin:5px 2px;}
+.report ul li{ float:left; width:248px; margin:4px;}
+.report ul li img{width:248px; height:330px; display:block; margin-bottom:10px;}
+.report a{ display:block;}
+.report p a:hover{text-decoration:underline;}
+.details{ width:90px; height:22px; color:#FFF; background:#F30; font:bold 14px/22px Tahoma, Geneva, sans-serif; text-align:center; margin:12px 0;}
+.details:hover{background:#F90;}
+.more{background:#fcf2ed; height:31px; width:774px; clear:both;}
+.more a{ display:block; float:right; width:128px; height:14px; margin:10px 12px; background:url(../images/freebie/icon.png) 0px -163px no-repeat;}
+.more a:hover{ background:url(../images/freebie/icon.png) 0px -178px no-repeat;}
+/********** Report CSS End **********/
+
+/************ share ************/
+.share1,.share_success{margin:0 auto; padding:0; background:#eaedf2; width:640px; height:410px; position:fixed; top: 140px; left:480px; z-index:100; font:normal 14px/26px Tahoma, Geneva, sans-serif;}
+.close{display:block; height:24px; float:right; padding: 3px 8px;}
+.share1 h2{ text-align:center; font-size:28px; padding:10px 0;}
+.share_main{ width:510px; min-height:95px; background:#f5f6f9; margin:10px auto; padding:1px;}
+.share_main .fix{margin:10px auto; width:500px;}
+.task_num{float:left; width:138px; min-height:90px; font:24px Arial, Helvetica, sans-serif; color:#CCC; text-align:center; vertical-align: middle; border-right:#e1e5ec 1px solid; line-height:inherit; m}
+.task_share{float:left; width:300px; min-height:90px; border-left:#FFF 1px solid; padding-left:20px;}
+.task_share img{ display:block; float:left; margin-right: 10px;}
+.task_share p{ line-height:36px;}
+.task_share span{ font-weight:bold; color:#339;}
+.share_facebook_like{ float:left;}
+.share_btn{display:block; width:220px; height:30px; background:url(../images/share_icon.png) no-repeat;}
+.share1 .error{ color:#F00; font-size:12px; line-height:14px; float:left; width:180px; display:block; margin-top:8px;}
+/************ share_success ************/
+.share_success{ height:280px;}
+.share_success h5{ font-size: 16px; }
+.suc{text-align:center; clear:both; padding-top:40px; height:210px;}
+
+/************ share_review ************/
+.share_success form{ width:100%; padding:0;}
+.share_success textarea{ width:98%; height:150px; padding:3px 5px; margin:10px 0;}
+.share_success input{ display:block; width:70px; height:26px; font:bold 14px/26px Tahoma, Geneva, sans-serif; text-align:center; background:#339; color:#FFF;}
+.share_success input:hover{background:#5964b5;}
+
+.winner{font-size:14px; line-height:28px; padding:20px 0; margin:8px 0; border:#efefef 4px solid;}
+.winner table{ margin:0 auto;}
+.winner table td{ border:0; }
+.winner th{ font:22px/40px "Trebuchet MS", Arial, Helvetica, sans-serif;text-align:center; }
+.winner a{ text-decoration:underline; color:#36C;}
+.winner a:hover{ text-decoration:underline; color:#39F;}

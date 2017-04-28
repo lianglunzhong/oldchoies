@@ -1,0 +1,88 @@
+<?php
+
+return array(
+    'en' => array(
+        'home' => 'home',
+        'Sorry, no results found' => 'Sorry, no results found.',
+        'Add to wishlist' => 'Add to wishlist',
+        'Wishlist' => 'Wishlist',
+        'Sold Out' => 'Sold Out',
+
+        'Category' => 'Category',
+        'Size' => 'Size',
+        'Color' => 'Color',
+        'Price' => 'Price',
+        "Icon's Pick" => "Icon's Pick",
+        'Sort By' => 'Sort By:',
+        'Default' => 'Default',
+        'SORT' => 'SORT',
+        'REFINE' => 'REFINE',
+        'Clear All' => 'Clear All',
+
+        'REFINE BY' => 'REFINE BY',
+        'out of stock' => 'out of stock',
+    ),
+    'es' => array(
+        'home' => 'Página de Inicio',
+        'Sorry, no results found' => 'Lo siento, no se encuentra ningún resultado.',
+        'Add to wishlist' => 'AÑADIR A SU LISTA DE DESEOS',
+        'Wishlist' => 'Lista De Deseos',
+        'Sold Out' => 'Fuera de Stock',
+
+        'Category' => 'Categoría',
+        'Size' => 'Talla',
+        'Color' => 'Color',
+        'Price' => 'Precio',
+        "Icon's Pick" => "Elección de Celebridad",
+        'Sort By' => 'Ordenar por:',
+        'Default' => 'Defecto',
+        'SORT' => 'Ordenar y',
+        'REFINE' => 'Filtrar',
+        'Clear All' => 'Borrar todo',
+
+        'REFINE BY' => 'REFINE BY',
+        'out of stock' => 'Fuera De Stock',
+    ),
+    'de' => array(
+        'home' => 'Homepage',
+        'Sorry, no results found' => 'Entschuldigung! Ihre Suche ergab leider keine Produkttreffer.',
+        'Add to wishlist' => 'Zur Wunschliste Hinzufügen',
+        'Wishlist' => 'Wunschliste',
+        'Sold Out' => 'Sold Out',
+
+        'Category' => 'Kategorie',
+        'Size' => 'Größe',
+        'Color' => 'Farbe',
+        'Price' => 'Preis',
+        "Icon's Pick" => "Wahl der Berühmtheit",
+        'Sort By' => 'Sortieren nach:',
+        'Default' => 'Default',
+        'SORT' => 'SORTIEREN',
+        'REFINE' => 'FILTERN',
+        'Clear All' => 'Alle Löschen',
+
+        'REFINE BY' => 'REFINE BY',
+        'out of stock' => 'Ausverkauft',
+    ),
+    'fr' => array(
+        'home' => 'ACCUEIL',
+        'Sorry, no results found' => 'Désolé, aucun résultat ne correspond.',
+        'Add to wishlist' => "Ajouter à la liste d'envies",
+        'Wishlist' => 'Liste de Souhaits',
+        'Sold Out' => 'Indisponible',
+
+        'Category' => 'Catégorie',
+        'Size' => 'Taille',
+        'Color' => 'Couleur',
+        'Price' => 'Prix',
+        "Icon's Pick" => "Choix de l'idole",
+        'Sort By' => 'Trier par:',
+        'Default' => 'Défaut',
+        'SORT' => 'Trier &',
+        'REFINE' => 'AFFINER',
+        'Clear All' => 'Effacer tout',
+
+        'REFINE BY' => 'Ordenar por',
+        'out of stock' => 'En rupture de Stock',
+    ),
+);

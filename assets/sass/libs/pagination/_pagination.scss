@@ -1,0 +1,195 @@
+// Pagination
+
+@mixin pagination-size($padding, $font-size) {
+  > li {
+    > a,
+    > span {
+      padding: 0 $padding;
+      font-size: $font-size;
+    }
+    
+  }
+}
+
+
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  display: block;
+  padding-left: 0;
+ // margin-top: $line-height-computed;
+  @include clearfix;
+  font-size:$font-size-base;
+  text-align: center;
+
+  > li {
+    display: inline-block; // Remove list-style and block-level defaults
+     margin: 0 5px 0 0;
+     @media(max-width:767px){
+        margin: 0 4px 0 0;
+     }
+     height:20px;
+     line-height: 20px;
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      text-decoration: none;
+      color: #000;
+      margin-left: -1px;
+      //border:1px solid #b0b0b0;
+      width:20px;
+      height:20px;
+      line-height: 20px;
+      text-align: center;
+    }
+    > span.sl{
+        border:none;
+        width:15px;
+    }
+    .next_btn1,.pre_btn1{
+        //color:#fff;
+          background:none;
+        //border:1px solid #202020;
+        //width:80px;
+        text-transform: capitalize;
+    }
+    .next_btn1:hover,
+    .next_btn1:focus,
+    .pre_btn1:hover,
+    .pre_btn1:focus{
+        //color:#fff;
+        //background-color:#202020;
+        //border:1px solid #202020;
+        background:none;
+        color: #202020;
+    }
+
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color:#202020;
+      color: #fff;
+    }
+  }
+  > li > span.sl{
+    &:hover,
+    &:focus {
+        background-color:#fff;
+    }
+  } 
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 2;
+      cursor: default;
+      text-decoration: none;
+      background-color:#202020;
+      color: #fff;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: #666;
+      background-color:#f5f5f5;
+      cursor: $cursor-disabled;
+     // border:1px solid #ccc;
+    }
+  }
+}
+.pagination-mobile {
+  display: inline-block;
+  padding-left: 0;
+  margin-top: $line-height-computed;
+  @media(max-width:767px){
+    margin-top: 0;
+  }
+  @include clearfix;
+  font-size:$font-size-base;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+       padding: 5px 10px;
+      line-height: $line-height-base;
+      text-decoration: none;
+      margin-left: -1px;
+      color:#666;
+      
+    }
+    > span{
+        padding:5px 18px;
+    }
+   
+   
+  }
+  li.first{
+      > a,
+      > span {
+        margin-left: 0;
+        border:1px solid #c8c8c8;
+        color:#666;
+      }
+      > a:hover,
+      > a:focus {
+        margin-left: 0;
+        background-color:#ededed;
+        color:#666;
+      }
+  }
+   li.last {
+      > a,
+      > span {
+          border:1px solid #c8c8c8;
+          color:#666;
+      }
+      > a:hover,
+      > a:focus {
+          background-color:#ededed;
+          color:#666;
+      }
+    }
+  > .disabled {
+    > a{
+      color: #666;
+      background-color:#fff;
+      cursor: $cursor-disabled;
+      border:1px solid #c8c8c8;
+      &:hover,
+      &:focus{
+       color: #666;
+      background-color:#fff !important;
+      cursor: $cursor-disabled;
+      border:1px solid #c8c8c8;  
+      }
+    }
+  }
+}
+// // Sizing
+// // --------------------------------------------------
+
+// // Large
+// .pagination-lg {
+//   @include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+// }
+
+// // Small
+// .pagination-sm {
+//   @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+// }

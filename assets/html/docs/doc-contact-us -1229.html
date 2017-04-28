@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>document About Us</title>
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+        <style>
+        .contact-form div{clear:none;}
+		.contect div.contact-note p{color:#444;}
+		.contact-form span{margin:none;line-height:24px;}
+		.contact-form ul li p{font-size:11px;color:#444;}
+		.contect span.btn-span{margin-bottom:20px;}
+        
+        </style>
+	</head>
+
+	<body>
+		<!-- header begin -->
+
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a>
+						<a href="/" class="visible-xs-inline hidden-sm hidden-md hidden-lg"> > help center</a> > Contact Us
+					</div>
+				</div>
+			</div>
+			<!-- main-middle begin -->
+			<div class="container">
+				<div class="row">
+					<aside id="aside" class="col-sm-3 hidden-xs">
+						<div class="category-box">
+							<h3 class="bg">HELP CENTER</h3>
+							<ul class="scroll-list">
+								<li><a href="/about-us" rel="nofollow">About Us</a>
+								</li>
+								<li><a class="on" href="/contact-us" rel="nofollow">Contact Us</a>
+								</li>
+								<li><a href="/shipping-delivery" rel="nofollow">Shipping & Delivery</a>
+								</li>
+								<li><a href="/returns-exchange" rel="nofollow">Return & Exchange</a>
+								</li>
+								<li><a href="/privacy-security" rel="nofollow">Privacy & Security</a>
+								</li>
+								<li><a href="/size-guide" rel="nofollow">Size Guide</a>
+								</li>
+								<li><a href="/payment" rel="nofollow">Payment</a>
+								</li>
+								<li><a href="/vip-policy" rel="nofollow">VIP Policy</a>
+								</li>
+								<li><a href="/faqs" rel="nofollow">FAQs</a>
+								</li>
+								<li><a href="/wholesale" rel="nofollow">Wholesale</a>
+								</li>
+								<li><a href="/affiliate-program" rel="nofollow">Affiliate Program</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					<article class="user col-sm-9 col-xs-12">
+						<div class="tit">
+							<h2>Contact Us</h2>
+						</div>
+						<div class="doc-box contect">
+							<h3 style="text-transform:uppercase; font-size:18px; font-weight:normal;">We Are Here to Help!</h3>
+							<p class="mt10">If you come across any problems while you are shopping at Choies.com, you can contact us within the following methods:</p>
+							<div>
+								<span class="btn-span"><a class="btn btn-default btn-lg" style="color:#fff;text-decoration:none;" target="_blank" title="LiveChart" href="https://chatserver.comm100.com/chatwindow.aspx?planId=311&siteId=203306"><img src="../../images/docs/icon_chat.png">LIVECHAT</a></span>
+								<span></span>
+							</div>
+                            <div>
+								<span class="btn-span"><a class="btn btn-default btn-lg JS_click" style="color:#fff;text-decoration:none;" target="_blank" title="">CLICK HERE TO EMAIL US</a></span>
+                                <div class="JS_clickcon hide">
+                                    <div class="row">
+                                        <form action="#" method="post" class="user-form contact-form col-xs-12 mt20">
+                                        <ul> 
+                                            <li>
+                                                <label class="col-sm-3 col-xs-12"><span>*</span> Name:</label>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <input type="text" value="" name="name" class="text-long text col-sm-12 col-xs-12" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label class="col-sm-3 col-xs-12"><span>*</span> Email Address:</label>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <input type="text" value="" name="email" class="text-long text col-sm-12 col-xs-12" />
+                                                    <p>Use your registered email if you have a Choies account.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label class="col-sm-3 col-xs-12"><span>*</span> Question Type:</label>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <div class="wdrop">
+                                                        <select class="selected-option col-sm-12 col-xs-12">
+                                                            <option value="" class="selected"> - Select the subject of your inquiry - </option>
+                                                            <option value=""> default </option>
+                                                            <option value=""> default </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label class="col-sm-3 col-xs-12"><span>&nbsp;</span>Order Number:<br/><span style="color:#444;">(if applicable)</span></label>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <input type="text" value="" name="order" class="text-long text col-sm-12 col-xs-12" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label class="col-sm-3 col-xs-12">
+                                                    <span>*</span> Message:
+                                                </label>
+                                                <div class="col-sm-6 col-xs-12 mb20">
+                                                    <textarea class="textarea-long text col-sm-12 col-xs-12" name="message"></textarea>
+                                                </div>
+                                            </li>
+                                             <li>
+                                                <label class="col-sm-3 col-xs-12"><span>&nbsp;</span>Attachment:</label>
+                                                <div class="col-sm-6 col-xs-12">
+                                                    <input type="text" class="text-long text col-sm-9 col-xs-9" readonly name="file_name" id="file_name"/>
+                                                    <input type="file" name="btn_file" style="display:none" onchange="file_change(this.value)"/>
+                                                    <input type="button" value="upload" class="col-sm-3 col-xs-3 btn btn-xs btn-default" style="height:24px;" onclick="btn_file.click();" name="get_file"/>
+                                                    
+                                                    <p>If you would like to show us some files, please upload them here. Each file must be below 2MB. The following file formats are supported: gif, jpg, png, bmp, doc, xls, txt, rar, ppt, pdf.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label class="col-sm-3 hidden-xs">&nbsp;</label>
+                                                <div class="btn-grid12 col-sm-6 col-xs-12 mb20">
+                                                    <input type="submit" name="" value="SEND" class="btn btn-primary btn-lg" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                  </div>
+                                </div>
+							</div>
+							<div class="contact-note">
+                                <p style="font-weight:bold;">Emails will be replied in 24 hours but may be delayed during the busy season. To solve your problem quickly, please note:</p>
+                                <p>
+                                    1.Questions before purchase , please check <i><a href="/faqs" style="color:#444;">FAQ</a> </i>;
+                                </p>
+                                <p>
+                                    2.Not receive Order Confirmation and Tracking Information, Check your<strong> SPAM FOLDER</strong> first;
+                                </p>
+                                <p>
+                                    3.Check Order Status and Track, please <a href="/customer/login" class="a-red">SIGN IN</a> first then click<i><a href="/tracks/track_order" style="color: rgb(65, 140, 175);">TRACK ORDER</a> </i>
+                                </p>
+                            </div>
+
+							<div class="mt20">
+								<span class="icon-contect5"></span>
+								<span><strong>Tel</strong></span>
+								<span> 442032899993 (7*24h) </span>
+							</div>
+
+							<!--更改部分en-->
+							<div>
+	                          	<p>[Company Name]  V-Shangs Science and Technology(H.K.)Co., Limited</p>
+	                          	<p>[Address]  Rm1702, 17F, Sino Centre, 582-592 Nathan Rd.,Kln.,HK</p>
+                            </div>
+                            <p>[<i>Company Relations</i>]</p>
+                            <div class="doc-contact-1230">
+                            	<div>
+	                            	<h4> WUXI INVOGUE TECHNOLOGY GROUP CO., LTD</h4>
+	                            	<p>Address: Room 1801, No. 855 NANHU Road, YANGMING SCIENCE INNOCATION CENTRE, NANCHANG DISTRICT, WUXI, JIANGSU PROVINCE, CHINA</p>
+	                            	<ul>
+	                            		<li><p><img src="../../images/docs/contact-us-left.jpg"></p><span>Nanjing Kuaiyue E-commerce Co., Limited </span></li>
+	                            		<li><p><img src="../../images/docs/contact-us-right.jpg"></p><span style="float:right;"> V-Shangs Science and Technology(H.K.) Co., Limited </span><p><img src="../../images/docs/contact-us-down.jpg"></p><p class="big-icon">choies</p></li>
+	                            	</ul>
+	                            	<p style="color:#c30;font-size:14px;">(Please note: These addresses do NOT accept returns.)</p>
+                            	</div>
+                            </div>
+                            <!--更改部分de-->
+							<div>
+	                          	<p>[Firmenname] V-Shangs Wissenschaft und Technologie(HK) Co. GmbH</p>
+	                          	<p>[Adresse] Zi. 1702, 17. Etage, Sino Zentrum, Nathan Str., 582-592 Kln., HK</p>
+                            </div>
+                            <p>[<i>Firmenbeziehungen</i>]</p>
+                            <div class="doc-contact-1230">
+                            	<div>
+	                            	<h4> WUXI INVOGUE TECHNOLOGIEGRUPPE CO. GMBH</h4>
+	                            	<p>Adresse: Zimmer 1801, Nr. 855 Nanhu Straße, YANGMING WISSENSCHAFTS-  INNOVATIONSZENTRUM, NANCHANG BEZIRK, WUXI, JIANGSU PROVINZ, CHINA</p>
+	                            	<ul>
+	                            		<li><p><img src="../../images/docs/contact-us-left.jpg"></p><span>Nanjing Kuaiyue E-Commerce Co. GmbH </span></li>
+	                            		<li><p><img src="../../images/docs/contact-us-right.jpg"></p><span style="float:right;"> V-Shangs Wissenschaft und Technologie(HK) Co. GmbH </span><p><img src="../../images/docs/contact-us-down.jpg"></p><p class="big-icon">choies</p></li>
+	                            	</ul>
+	                            	<p style="color:#c30;font-size:14px;">(Bitte beachten Sie: Diese Adresse ist NICHT unsere Rückgabeadrresse.)</p>
+                            	</div>
+                            </div>
+                            <!--更改部分es-->
+							<div>
+	                          	<p>[Nombre de Sociedad ] V-Shangs Ciencia Y Tecnología (H.K.) Sociedad Limitada</p>
+	                          	<p>[Dirección]  1702, Piso 17, Sino Centre, Calle Nathan 582-592, Kln.,HK</p>
+                            </div>
+                            <p>[<i>Relaciónes de Empresa</i>]</p>
+                            <div class="doc-contact-1230">
+                            	<div>
+	                            	<h4> WUXI INVOGUE TECHNOLOGY GROUP SDAD LTDA</h4>
+	                            	<p>Dirección: 1801 CALLE NANHU N°855, YANGMING SCIENCE INNOCATION CENTRE, NANCHANG DISTRITO, WUXI CIUDAD, PROVINCIA DE JIANGSU , CHINA</p>
+	                            	<ul>
+	                            		<li><p><img src="../../images/docs/contact-us-left.jpg"></p><span>Nanjing Kuaiyue Comercio Electrónico Sociedad Limitada</span></li>
+	                            		<li><p><img src="../../images/docs/contact-us-right.jpg"></p><span style="float:right;"> V-Shangs Ciencia Y Tecnología (H.K.) Sociedad Limitada </span><p><img src="../../images/docs/contact-us-down.jpg"></p><p class="big-icon">choies</p></li>
+	                            	</ul>
+	                            	<p style="color:#c30;font-size:14px;">(Atención: Estas direcciónes no aceptan las devoluciónes.)</p>
+                            	</div>
+                            </div>
+                            <!--更改部分fr-->
+							<div>
+	                          	<p>[Nom de la compagnie]  Science and Technology(H.K.)Co., Ltd V-Shangs</p>
+	                          	<p>[Addresse]  Rm1702, 17F, Sino Centre, 582-592 Nathan Rd.,Kln.,HK</p>
+                            </div>
+                            <p>[<i>Les Relations d'Entreprises</i>]</p>
+                            <div class="doc-contact-1230">
+                            	<div>
+	                            	<h4> WUXI INVOGUE TECHNOLOGY GROUP CO., Ltd</h4>
+	                            	<p>Addresse: Room 1801, No. 855 NANHU Road, YANGMING SCIENCE INNOCATION CENTRE, NANCHANG DISTRICT, WUXI, JIANGSU PROVINCE, CHINA</p>
+	                            	<ul>
+	                            		<li><p><img src="../../images/docs/contact-us-left.jpg"></p><span>Nanjing Co., Ltd Kuaiyue E-commerce </span></li>
+	                            		<li><p><img src="../../images/docs/contact-us-right.jpg"></p><span style="float:right;"> Science and Technology(H.K.) Co., Ltd V-Shangs </span><p><img src="../../images/docs/contact-us-down.jpg"></p><p class="big-icon">choies</p></li>
+	                            	</ul>
+	                            	<p style="color:#c30;font-size:14px;">(Notez s'il vous plaît: Ces adresses ne acceptons pas les retours.)</p>
+                            	</div>
+                            </div>
+                            <!--更改部分ru-->
+							<div>
+	                          	<p>[Имя Компании]  V-Shangs Наука и Техника(Гонконг) ООО</p>
+	                          	<p>[Адрес]  Комната1702, 17 Этаж, Сино-Центр, 582-592 Натан Дорога, Цзюлун , Гонконг</p>
+                            </div>
+                            <p>[<i>Отношения Компании</i>]</p>
+                            <div class="doc-contact-1230">
+                            	<div>
+	                            	<h4> УСИ В МОДЕ ТЕХНОЛОГИЧЕСКАЯ ГРУППА ООО</h4>
+	                            	<p>Адрес: Комната 1801, № 855 НАНЬХУ Дорога , ЯНМИН НАУЧНЫЙ ИННОВАЦИОННЫЙ ЦЕНТР, Рай. НАНЬЧА, УСИ, ПРОВИНЦИЯ ЦЗЯНСУ, КИТАЙ</p>
+	                            	<ul>
+	                            		<li><p><img src="../../images/docs/contact-us-left.jpg"></p><span>Нанкин КуайЮэ Электронная Коммерция ООО </span></li>
+	                            		<li><p><img src="../../images/docs/contact-us-right.jpg"></p><span style="margin:0 25px;float:right;">V-Shangs Наука и Техника(Гонконг) ООО</span><p><img src="../../images/docs/contact-us-down.jpg"></p><p class="big-icon">choies</p></li>
+	                            	</ul>
+	                            	<p style="color:#c30;font-size:14px;">(Обратите внимание: Эти адреса НЕ принимают возвраты.)</p>
+                            	</div>
+                            </div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer begin -->
+
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+        
+		<script type="text/javascript">
+        function file_change(e)
+        {
+            document.getElementById("file_name").value = e;
+        }
+        </script>
+	</body>
+
+</html>

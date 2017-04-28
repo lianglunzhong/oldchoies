@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>  
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>瀑布流</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<script src="../js/jquery-1.8.2.min.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/lazyload.js"></script>
+
+		<style>
+			.no{overflow-y:initial !important;}
+			body{background:#e9e9e9;font-family: Gill-Sans,Arial,sans-serif;}
+			#main{position:relative;margin:20px auto;min-height: 656px;}
+			.pic-name{text-align:center;}
+			.item{padding:5px;border-radius: 6px;float:left;}
+			.item-box{border-radius: 6px;box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);width:230px;}
+			.item-box img{border-radius: 6px 6px 0 0;width:230px;cursor:pointer;}
+			.bottom{background:#fff;border-radius:0 0 6px 6px;}
+			.bottom .author{font-weight:bold;}
+			.pic-name{padding:5px 10px;}
+			.bottom .author,.bottom .review-first{border-top: 1px solid #e7e7e7;padding:5px 10px;}
+			#show-detail{ position:fixed;width:100%;top:0;bottom:0;left:0;right:0;background: rgba(239,239,239,0.95);display:none;overflow-y:auto;z-index:9999;}
+			.pic-detail{width:630px;background:#fff;border-radius: 8px 8px 0 0;padding-bottom:20px;}
+			.clo-btn{position:fixed;top:30px;right:50px;font-size:25px;height:30px;width:30px;text-align:center;cursor:pointer;}
+			.clo-btn .fa-close{color:#c0c0c0;}
+			.arrow-left,.arrow-right{position:fixed;font-weight:bold;top:40%;font-size:22px;cursor:pointer;color:#c0c0c0;height:50px;width:50px;}
+			.arrow-left{left:30px;}
+			.arrow-right{right:30px;}
+			.pic-detail{width:630px;background:#fff;border-radius:8px;margin:0 auto;margin-top:30px;overflow:hidden;}
+			.pic-detail p{text-align:center;}
+			.pic-detail img{width:550px;margin-top:50px;}
+			.noscroll{overflow:hidden;}
+			.comment,.comment-form{width:550px;padding:0 20px;margin:0 auto;margin-top:20px;padding-bottom:20px;border-bottom:1px solid #e3e3e3;overflow:hidden;}
+			.comment span{border-radius: 50%;-webkit-box-shadow: 0 0 2px rgba(0,0,0,0.33) inset;box-shadow: 0 0 2px rgba(0,0,0,0.33) inset;height: 40px;width: 40px;display:inline-block;float:left;position:relative;overflow:hidden;}
+			.comment img{position:absolute;top:0;left:0;margin-top:0;}
+			.comment p{width:460px;float:right;text-align:left;}
+			.comment-text{width:510px;text-align:left;height:55px;background:#f4f4f4;border-radius:6px;border:#f4f4f4;padding:5px;}
+			.comment-form input{background:#be091c;border:1px solid #be091c;margin-top:10px;float:right;border-radius:5px;text-transform:capitalize;}
+			#related{position:relative;width:960px !important;margin:0 auto;margin-top:30px;}
+			@media(min-width:768px)and (max-width:1000px){#related{width:720px !important;;}}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- header begin -->
+		<!-- main begin -->
+		<section id="main">
+			<!-- main begin -->
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><a href="#"><img src="../img/1.jpg" alt="" href="/" class="lazy"></a></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><a href="#"><img src="../img/2.jpg" alt="" href="/" class="lazy"></a></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><a href="#"><img src="../img/3.jpg" alt="" href="/" class="lazy"></a></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/4.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/5.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/6.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/7.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/8.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/9.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/10.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/11.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/12.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/13.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/14.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/15.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/16.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/17.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/18.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/19.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/20.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/21.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/22.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/23.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-box">
+						<div class="pic"><img src="../img/24.jpg" alt="" href="/" class="lazy"></div>
+						<div class="bottom">
+							<div class="pic-name">beauty</div>
+							<div class="author">zeki xi</div>
+							<div class="review-first">so beautiful,so cheap!</div>
+						</div>
+					</div>
+				</div>
+				
+		</section>
+		<!-- JS-popwincon1 -->
+			<div id="show-detail">
+				<div class="clo-btn"><i class="fa fa-close"></i></div>
+				<div class="arrow">
+					<div class="arrow-left"><i class="fa fa-chevron-left"></i></div>
+					<div class="arrow-right"><i class="fa fa-chevron-right"></i></div>
+				</div>
+				<div class="pic-detail">
+					<p><img src="../img/331.jpg"></p>
+					<div class="comment"><a><span><img src="../img/331.jpg"></span></a><p>This white chiffon shift dress with slip sleeves crafted in 100%Polyester, non-stretchable material, please hand wash cold, featuring deep v-neck design, slip sleeves, shift dress, layered detail, mini dress. casual style textured fabric, perfect cut, full details of the sense of design, personalized and fashion. - See more at: https://www.choies.com/product/white-chiffon-shift-dress-with-slip-sleeves_p29413#sthash.ToqHzuuv.dpuf</p></div>
+					<form action="" method="post" class="comment-form">
+						<textarea name="comment" class="comment-text">	</textarea>
+						<input type="submit" class="btn btn-primary btn-lg" value="Send">
+					</form>
+				</div>
+				<div id="related">
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><a href="#"><img src="../img/21.jpg" alt="" href="/" class="lazy"></a></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><a href="#"><img src="../img/22.jpg" alt="" href="/" class="lazy"></a></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><a href="#"><img src="../img/23.jpg" alt="" href="/" class="lazy"></a></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><img src="../img/24.jpg" alt="" href="/" class="lazy"></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><a href="#"><img src="../img/23.jpg" alt="" href="/" class="lazy"></a></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-box">
+							<div class="pic"><img src="../img/24.jpg" alt="" href="/" class="lazy"></div>
+							<div class="bottom">
+								<div class="pic-name">beauty</div>
+								<div class="author">zeki xi</div>
+								<div class="review-first">so beautiful,so cheap!</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			    
+			</div>
+		<!-- gotop -->
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+		<script src="../js/common.js"></script>
+		<script src="../js/plugin.js"></script>
+		<script src="../js/slider.js"></script>
+		<script src="../js/waterfall.js"></script>
+		
+		<script>
+		 
+
+				window.onload=function(){
+				
+					waterfall("main","item");
+					window.onresize=function(){
+						setTimeout(waterfall("main","item"),50);
+					}
+				// var img={'data':[{'src':'../img/1.jpg'},{'src':'../img/2.jpg'},{'src':'../img/3.jpg'},{'src':'../img/4.jpg'},{'src':'../img/5.jpg'},{'src':'../img/6.jpg'},{'src':'../img/7.jpg'},{'src':'../img/8.jpg'},{'src':'../img/9.jpg'}]};
+				 $.ajax({
+						
+					  	type:"POST",
+					  	url:"http://127.0.0.1/products.php",
+					  	dataType:"json",
+					  	data:"",
+					  	success:function (icon){
+					 		
+								window.onscroll=function(){
+									
+								if(checkScroll()){
+									 //for(var i=0;i<$(img.data).length;i++) {
+										for(var i in icon) {
+
+										var itemn='<div class="item">'+'<div class="item-box">'+
+										'<div class="pic"><img src="//d1cr7zfsu1b8qs.cloudfront.net/assets/images/2016/loading.jpg" alt="" href="/" class="lazy" data-original='+icon[i]['src']+'></div>'+
+
+										 //'<div class="pic"><img src="//d1cr7zfsu1b8qs.cloudfront.net/assets/images/2016/loading.jpg" alt="" href="/" class="lazy" data-original='+$(img.data[i]).attr("src")+'></div>'+
+
+										//'<div class="pic"><img src="'+ $(img.data[i]).attr("src")+'" alt="" href="/" ></div>'+ 
+										'<div class="bottom">'+
+											'<div class="pic-name">'+icon[i]['pictitle']+'</div>'+
+											'<div class="author">'+icon[i]['author']+'</div>'+
+											'<div class="review-first">'+icon[i]['review']+'</div>'+
+										'</div>'+
+										'</div>'+'</div>';
+										$("#main").append(itemn);
+										}
+																//位置在if里会影响加载图片位置
+									};	
+									waterfall("main","item");                             //位置在if外正常
+									 $("img.lazy").lazyload({
+					                  	event: "scrollstop"
+					               });								
+															
+						 		}
+
+						 	}					 
+					})		
+	
+			}
+
+			
+
+			
+
+			
+			$(function(){
+					$(".clo-btn").click(function(){
+						$("#show-detail").hide();
+						 $("body").removeClass("noscroll");
+						 $("html").removeClass("no");
+						 window.onresize=function(){
+						 setTimeout(waterfall("main","item"),50);
+						 }
+
+					});
+
+
+					$('.pic').live("click",function(){
+						$("html").addClass("no");
+						$("#show-detail").show();
+						$("body").addClass("noscroll");
+						waterfall("related","item");
+						window.onresize=function(){
+						setTimeout(waterfall("related","item"),50);
+						}
+
+
+				         $.post(
+				             'http://127.0.0.1/products1.php',
+				            
+				             function (icon){
+					 		
+						 		$("#show-detail").scroll(function(){
+									
+						 		if(relatedScroll()){
+						 				for(var i in icon) {
+						 				var itemn='<div class="item">'+'<div class="item-box">'+
+						 				// '<div class="pic"><img src="//d1cr7zfsu1b8qs.cloudfront.net/assets/images/2016/loading.jpg" alt="" href="/" class="lazy" data-original='+icon[i]['src']+'></div>'+
+						 				'<div class="pic"><img  alt="" href="/" class="lazy" src='+icon[i]['src']+'></div>'+
+						 				'<div class="bottom">'+
+						 					'<div class="pic-name">'+icon[i]['pictitle']+'</div>'+
+											'<div class="author">'+icon[i]['author']+'</div>'+
+						 					'<div class="review-first">'+icon[i]['review']+'</div>'+
+						 				'</div>'+
+						 				'</div>'+'</div>';
+						 				$("#related").append(itemn);
+						 				}							
+						 			};	
+						 			waterfall("related","item");                            
+						 			 // $("img.lazy").lazyload({
+					      //               	event: "scrollstop"
+					      //            });								
+															
+						  		}
+						  	)
+
+						  	},
+				            'json'
+				            );
+				    });
+				})
+		</script>
+	</body>
+
+</html>

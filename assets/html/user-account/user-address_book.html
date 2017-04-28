@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>user address-book</title>
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- header begin -->
+
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a>
+						<a href="user-account summary.html" class="visible-xs-inline hidden-sm hidden-md hidden-lg"> > my account</a> > address book
+					</div>
+					<div class="back visible-xs-inline hidden-sm hidden-md hidden-lg">&lt;&lt;&nbsp;<a class="back" href="/">back</a></div>
+				</div>
+			</div>
+			<!-- main-middle begin -->
+			<div class="container">
+				<div class="row">
+					<aside id="aside" class="col-sm-3 hidden-xs">
+						<a href="#" class="user-home hidden-xs">My Account</a>
+						<div class="category-box">
+							<h3 class="bg">My Orders</h3>
+							<ul class="scroll-list">
+								<li><a href="user-order history.html">Order History</a>
+								</li>
+								<li><a href="#">Unpaid Orders</a>
+								</li>
+								<li><a href="#">Wish List</a>
+								</li>
+								<li><a href="#">Track Order</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">My Profile</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Account Setting</a>
+								</li>
+								<li><a href="#">Change Password</a>
+								</li>
+								<li><a href="#" class="on">Address Book</a>
+								</li>
+								<li><a href="#">Create Address</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">MY POINTS & COUPONS</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Points History</a>
+								</li>
+								<li><a href="#">My Coupons</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					<article class="user col-sm-9 col-xs-12">
+						<div class="tit">
+							<h2>Address Book</h2>
+						</div>
+						<div class="row">
+							<div class="col-sm-3 hidden-xs"></div>
+							<dl class="address-book col-sm-6 col-xs-12">
+								<dd class="last">
+									<div class="address-book-form">
+										<p class="top-btn"><a class="a-red" id="add_new" href="user-add_new_address.html">Add New</a>
+										</p>
+										<div title="" class="JS_select1 w-address-book-con selected">
+											<div class="address-book-con">
+												<ul>
+													<li>
+														<label>Name:</label>
+														<div>996 jhlu </div>
+													</li>
+													<li>
+														<label>Tel:</label>
+														<div>48978989 </div>
+													</li>
+													<li>
+														<label>Address:</label>
+														<div>tye65ujt 88, Buckinghamshire UNITED KINGDOM 787889 </div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<form method="post" action="/address/set_default">
+											<p class="top-btn">
+												<a title="" class="a-red edit_address JS_popwinbtn" href="">Edit</a>
+												<a class="a-underline delete" href="javascript:delete_address(154586)">Delete</a>
+												<input type="hidden" id="address_id" value="" name="address_id">
+												<input type="submit" class="btn btn-default btn-xs flr" value="DEFAULT">
+											</p>
+										</form>
+										<div title="" class="JS_select1 w-address-book-con ">
+											<div class="address-book-con">
+												<ul>
+													<li>
+														<label>Name:</label>
+														<div>
+															41512123151 jyuk </div>
+													</li>
+													<li>
+														<label>Tel:</label>
+														<div>
+															5244 </div>
+													</li>
+													<li>
+														<label>Address:</label>
+														<div>
+															gkky gkuyg, Bayern GERMANY 41512123151 </div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<form method="post" action="/address/set_default">
+											<p class="top-btn">
+												<a title="" class="a-red edit_address" href="/">Edit</a>
+												<a class="a-underline delete" href="javascript:delete_address(120201)">Delete</a>
+												<input type="hidden" id="address_id" value="" name="address_id">
+												<input type="submit" class="btn btn-default btn-xs flr" value="DEFAULT">
+											</p>
+										</form>
+									</div>
+								</dd>
+							</dl>
+							<div class="col-sm-3 hidden-xs"></div>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- footer begin -->
+
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript">
+			// JS_filter1
+				function getScrollTop() {
+				    var scrollPos; 
+				    if (window.pageYOffset) 
+				    {
+				        scrollPos = window.pageYOffset;
+				    } 
+				    else if (document.compatMode && document.compatMode != 'BackCompat')
+				    { 
+				        scrollPos = document.documentElement.scrollTop; 
+				    } 
+				    else if (document.body) 
+				    { 
+				        scrollPos = document.body.scrollTop; 
+				    } 
+				    return scrollPos; 
+				}
+				$(".JS_popwinbtn").live("click",function(){
+								
+							    var top = getScrollTop();
+							    top = top - 35;
+							    $('body').append('<div class="JS_filter opacity hidden-xs"></div>');
+							    $('.JS_popwincon').css({
+							        "top": top, 
+							        "position": 'absolute'
+							    });
+							    
+							    $('.JS_popwincon').appendTo('body').fadeIn(320);
+							    $('.JS_popwincon').show();
+							    return false;
+							})			
+				$(".JS_close1,.JS_filter").live("click",function(){
+							    $(".JS_filter").remove();
+							    $('.JS_popwincon').fadeOut(160);
+							    return false;
+							})
+		</script>
+		<script src="../../js/plugin.js"></script>
+
+		<!-- JS_popwincon -->
+		<div class="JS_popwincon popwincon popwincon-user hide hidden-xs">
+			<a class="JS_close1 close-btn2"></a>
+			<div class="tit">
+				<h2>EDIT YOUR ADDRESS</h2>
+			</div>
+			<div class="row">
+				<form action="#" method="post" class="user-share-form user-form">
+					<ul class="add-showcon-boxcon">
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> First Name:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="firstname" class="text text-long col-sm-12 col-xs-12" />
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> Last Name:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="lastname" class="text text-long col-sm-12 col-xs-12" />
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> Address:</label>
+							<div class="col-sm-9 col-xs-12">
+								<textarea class="textarea-long col-sm-12 col-xs-12" name="address"></textarea>
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> Country:</label>
+							<div class="col-sm-9 col-xs-12">
+								<div class="wdrop">
+									<select class="selected-option col-sm-12 col-xs-12">
+										<option value="" class="selected"> default </option>
+										<option value=""> default </option>
+										<option value=""> default </option>
+									</select>
+									<input class="Js_repNum" type="hidden" value="DE" name="country" />
+								</div>
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> County / Province:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="state" class="text text-long col-sm-12 col-xs-12" />
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> City / Town:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="city" class="text text-long col-sm-12 col-xs-12" />
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> Zip / Postal Code:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="zip" class="text text-long col-sm-12 col-xs-12" />
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 col-xs-12"><span>*</span> Phone:</label>
+							<div class="col-sm-9 col-xs-12">
+								<input type="text" value="" name="phone" class="text text-long col-sm-12 col-xs-12" />
+								<p class="phone-tips">Please leave correct and complete phone number for accurate delivery by postman</p>
+							</div>
+						</li>
+						<li>
+							<label class="col-sm-3 xs-hidden">&nbsp;</label>
+							<div class="col-sm-9 col-xs-12">
+								<input id="default" class="radio" type="checkbox" value="1" name="default">
+								<span for="default">Make this your default shipping address.</span>
+							</div>
+						</li>
+
+					</ul>
+					<div>
+						<label class="col-sm-3 xs-hidden">&nbsp;</label>
+						<div class="col-sm-9 col-xs-12">
+							<input type="reset" value="Cancel" class="btn btn-primary btn-sm" />
+							<input type="submit" value="save & Add New" class="btn btn-primary btn-sm" />
+						</div>
+					</div>
+				</form>
+			</div>
+	</body>
+
+</html>

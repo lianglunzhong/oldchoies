@@ -1,0 +1,93 @@
+/* prev next */
+
+.prev1,
+.next1,
+.prev4,
+.next4,
+.prev5,
+.next5 {
+	@include inline-block;
+	background: url(../images/icons-2.png) no-repeat;
+	width: 26px;
+	height: 56px;
+	position: absolute;
+	top: 110px;
+	cursor: pointer;
+	z-index: 5;
+}
+.prev1 {
+	background-position: 0 -78px;
+	left: 0;
+}
+.next1 {
+	background-position: -34px -78px;
+	right: 0;
+}
+.prev-disabled,
+.next-disabled {
+	background: none;
+}
+.prev4 {
+	background-position: 0 -1576px;
+	left: 0;
+}
+.next4 {
+	background-position: -34px -1576px;
+	right: 0;
+}
+.prev5 {
+	background-position: 0 -1576px;
+	left: 0;
+}
+.next5 {
+	background-position: -34px -1576px;
+	right: 0;
+}
+.prev2,
+.next2 {
+	@include inline-block;
+	background: url(../images/icons-2.png) no-repeat;
+	width: 9px;
+	height: 17px;
+	position: absolute;
+	top: 250px;
+	cursor: pointer;
+	z-index: 1;
+}
+.prev2 {
+	background-position: -34px -500px;
+	left: 0;
+}
+.next2 {
+	background-position: -51px -500px;
+	right: 0;
+}
+.next-btn1,
+.prev-btn1 {
+	margin: 0 5px;
+}
+.next-btn1 {
+	background: url(../images/icons-2.png) no-repeat right -460px;
+	padding-right: 12px;
+}
+.prev-btn1 {
+	background: url(../images/icons-2.png) no-repeat -53px -522px;
+	padding-left: 12px;
+}
+.prev3,
+.next3 {
+	@include inline-block;
+	background: url(../images/icons-2.png) no-repeat;
+	width: 17px;
+	height: 9px;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.prev3 {
+	background-position: 0 -1535px;
+}
+.next3 {
+	background-position: 0 -1552px;
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>user account-setting</title>
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- header begin -->
+
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a>
+						<a href="user-account summary.html" class="visible-xs-inline hidden-sm hidden-md hidden-lg"> > my account</a> > account setting
+					</div>
+					<div class="back visible-xs-inline hidden-sm hidden-md hidden-lg">&lt;&lt;&nbsp;<a class="back" href="/">back</a></div>
+				</div>
+			</div>
+			<!-- main-middle begin -->
+			<div class="container">
+				<div class="row">
+					<aside id="aside" class="col-sm-3 hidden-xs">
+						<a href="#" class="user-home hidden-xs">My Account</a>
+						<div class="category-box">
+							<h3 class="bg">My Orders</h3>
+							<ul class="scroll-list">
+								<li><a href="user-order history.html">Order History</a>
+								</li>
+								<li><a href="#">Unpaid Orders</a>
+								</li>
+								<li><a href="#">Wish List</a>
+								</li>
+								<li><a href="#">Track Order</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">My Profile</h3>
+							<ul class="scroll-list">
+								<li><a href="#" class="on">Account Setting</a>
+								</li>
+								<li><a href="#">Change Password</a>
+								</li>
+								<li><a href="#">Address Book</a>
+								</li>
+								<li><a href="#">Create Address</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">MY POINTS & COUPONS</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Points History</a>
+								</li>
+								<li><a href="#">My Coupons</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					
+					<div class="sidebar">
+						<div class="sidebar-nav visible-xs-block hidden-sm hidden-md hidden-lg col-xs-12">
+							<h5 class="sort-nav-toggle JS-toggle">
+								<span>
+								<b class="visible-phone">My Account</b>
+								<i class="fa fa-caret-down"></i>
+								</span>
+							</h5>
+							<div class="sort-nav-section JS-toggle-box hide">
+								<div class="accordion">
+									<div class="accordion-group visible-phone">
+										<div class="accordion-heading JS-toggle">
+											<a class="accordion-toggle " href="javascript:void(0);">
+											My Orders
+											<i class="fa fa-caret-down flr"></i>
+											</a>
+										</div>
+										<div class="accordion-body JS-toggle-box hide" style="display: none;">
+											<div class="accordion-inner">
+												<ul class="unstyled">
+													<li class="selector">
+													<a href="">Order History</a>
+													</li>
+													<li class="selector">
+													<a href="">Unpaid Orders</a>
+													</li>
+													<li class="selector">
+													<a href="">Wish List</a>
+													</li>
+													<li class="selector">
+													<a href="">Track Order</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								<div class="accordion-group visible-phone">
+										<div class="accordion-heading JS-toggle">
+											<a class="accordion-toggle " href="javascript:void(0);">
+											My Profile
+											<i class="fa fa-caret-down flr"></i>
+											</a>
+										</div>
+										<div class="accordion-body JS-toggle-box hide" style="display: none;">
+											<div class="accordion-inner">
+												<ul class="unstyled">
+													<li class="selector">
+													<a href="">Account Setting</a>
+													</li>
+													<li class="selector">
+													<a href="">Change Password</a>
+													</li>
+													<li class="selector">
+													<a href="">Address Book</a>
+													</li>
+													<li class="selector">
+													<a href="">Create Address</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group visible-phone">
+										<div class="accordion-heading JS-toggle">
+											<a class="accordion-toggle " href="javascript:void(0);">
+											MY POINTS & COUPONS
+											<i class="fa fa-caret-down flr"></i>
+											</a>
+										</div>
+										<div class="accordion-body JS-toggle-box hide" style="display: none;">
+											<div class="accordion-inner">
+												<ul class="unstyled">
+													<li class="selector">
+													<a href="">Points History</a>
+													</li>
+													<li class="selector">
+													<a href="">My Coupons</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<article class="user col-sm-9 col-xs-12">
+						<div class="tit">
+							<h2>Account Setting</h2>
+						</div>
+						<div class="row">
+							<div class="col-sm-2"></div>
+							<form action="#" method="post" class="user-form col-sm-8">
+								<ul>
+									<li>
+										<label class="col-sm-3 col-xs-12"><span>*</span> Email:</label>
+										<div class="col-sm-9 col-xs-12">echolee@126.com</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12"><span>*</span> First Name:</label>
+										<div class="col-sm-9 col-xs-12">
+											<input type="text" value="" name="firstname" class="text-long text col-sm-12 col-xs-12" />
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12"><span>*</span> Last Name:</label>
+										<div class="col-sm-9 col-xs-12">
+											<input type="text" value="" name="lastname" class="text-long text col-sm-12 col-xs-12" />
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12"><span>*</span> Country:</label>
+										<div class="col-sm-9 col-xs-12">
+											<div class="wdrop">
+												<select class="selected-option col-sm-12 col-xs-12">
+													<option value="" class="selected"> default </option>
+													<option value=""> default </option>
+													<option value=""> default </option>
+												</select>
+												<input class="Js_repNum" type="hidden" value="DE" name="country" />
+											</div>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">Gender:</label>
+										<div class="col-sm-9 col-xs-12">
+											<span class="w-radio "><input type="radio" value="" /> Female</span>
+											<span class="w-radio"><input type="radio" value="" /> Male</span>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 col-xs-12">Birthday:</label>
+										<div class="col-sm-9 col-xs-12">
+											<div class="wdrop-chip col-xs-4 pl">
+												<select class="selected-option col-xs-12">
+													<option value="" class="selected"> default </option>
+													<option value=""> default </option>
+													<option value=""> default </option>
+												</select>
+												<input class="Js_repNum" type="hidden" id="year" value="2012" name="year" />
+											</div>
+											<div class="wdrop-chip col-xs-4 pl">
+												<select class="selected-option col-xs-12">
+													<option value="" class="selected"> default </option>
+													<option value=""> default </option>
+													<option value=""> default </option>
+												</select>
+												<input class="Js_repNum" type="hidden" id="month" value="12" name="month" />
+											</div>
+											<div class="wdrop-chip col-xs-4 pl">
+												<select class="selected-option col-xs-12">
+													<option value="" class="selected"> default </option>
+													<option value=""> default </option>
+													<option value=""> default </option>
+												</select>
+												<input class="Js_repNum" id="day" type="hidden" value="31" name="day" />
+											</div>
+										</div>
+									</li>
+									<li>
+										<label class="col-sm-3 hidden-xs">&nbsp;</label>
+										<div class="btn-grid12 col-sm-9 col-xs-12">
+											<input type="submit" name="" value="save" class="btn btn-primary btn-lg" />
+										</div>
+									</li>
+								</ul>
+							</form>
+							<div class="col-sm-2"></div>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- footer begin -->
+
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+		<script src="../../js/plugin.js"></script>
+		<script src="../../js/slider.js"></script>
+		
+	</body>
+
+</html>

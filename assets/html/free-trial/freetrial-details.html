@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>freetrial report detail</title>
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- header begin -->
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a>
+						<a href="/" class="visible-xs-inline hidden-sm hidden-md hidden-lg"> > free trial</a> > freetrial reports
+					</div>
+					<div class="back visible-xs-inline hidden-sm hidden-md hidden-lg">&lt;&lt;&nbsp;<a class="back" href="/">back</a>
+					</div>
+				</div>
+			</div>
+			<!-- main begin -->
+			<section class="container">
+				<div class="trial-report trial-report-list">
+					<h2>Winners' Feedbacks</h2>
+					<!-- report_details -->
+					<div class="report-details">
+						<div class="report-left JS_imgbox col-sm-5 col-xs-12">
+							<div class="pro-img">
+								<a href="#">
+									<img class="JS_pro_img" src="../../images/freetrial/143370-big.jpg" style="display: inline;" />
+								</a>
+							</div>
+							<div class="pro-small">
+								<div class="pro-items">
+									<ul class="JS_pro_small">
+										<li class="current col-xs-3">
+											<a href="/">
+												<img src="../../images/freetrial/143370.jpg" imgb="http://img1.choies.com/pimg/420/143370.jpg" />
+											</a>
+										</li>
+										<li class="col-xs-3">
+											<a href="/">
+												<img src="../../images/freetrial/143373.jpg" imgb="http://img1.choies.com/pimg/420/143373.jpg" />
+											</a>
+										</li>
+										<li class="col-xs-3">
+											<a href="/">
+												<img src="../../images/freetrial/143372.jpg" imgb="http://img3.choies.com/pimg/420/143372.jpg" />
+											</a>
+										</li>
+										<li class="col-xs-3">
+											<a href="/">
+												<img src="../../images/freetrial/143370.jpg" imgb="http://img1.choies.com/pimg/420/143370.jpg" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="report-right col-sm-6 col-xs-12 col-sm-offset-1">
+							<div class="right-top">
+								<h3><a href="#">Cut Out Dress With Studded Crossed Shoulder Straps</a></h3>
+								<span>Item#: CDWC2634</span>
+								<p class="price">Price Now: $60.29 <a href="#" class="btn btn-primary btn-sm">buy now</a>
+								</p>
+							</div>
+							<div class="right-trial">
+								<div class="right-tit">
+									<h4>Trial Report</h4>
+								</div>
+								<div class="right-con">
+									<div class="right-con-t"><span>Super Lisa</span> <span>24</span> <span>Government Employee</span>
+									</div>
+									<p>I couldn't help but squeal in delight when I finally received this dress.It looks so much better in person.The color is so easy on the eyes.I love the style and the material.I'm loving the summerish vibe of this pleated dress.This is a simple
+										piece of clothing that can speak volumes thru its loud color and simplicity.I paired it with jeans and low-heel sandals. I didn't even bother accessorising much because I wanted the whole look to be carefree and simple.This is definitely a bright
+										and sunshine-y outfit for you. This is my first order from Sheinside so I must say that the delivery is super slow.I waited for almost a month. Maybe because they only gave this to me for free so they use standard shipping. The client service
+										is good. The product quality is very good, and the packaging is great!</p>
+									<p>
+										<img src="../../images/freetrial/6tCcBTv0oM.jpg" />
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+		<!-- footer begin -->
+
+		<!-- gotop -->
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+		<script src="../../js/plugin.js"></script>
+		<script src="../../js/slider.js"></script>
+		<script>
+			 /* pro_img */
+			jQuery.fn.loadthumb = function(options) {
+				options = $.extend({
+					src: ""
+				}, options);
+				var _self = this;
+				_self.hide();
+				var img = new Image();
+				$(img).load(function() {
+					_self.attr("src", options.src);
+					_self.fadeIn("slow");
+				}).attr("src", options.src);
+				return _self;
+			}
+			$(".JS_pro_small li").live("click", function() {
+				var src = $(this).find("img").attr("imgb");
+				var bigimgSrc = $(this).find("img").attr("bigimg");
+				$(this).parents(".JS_imgbox").find(".JS_pro_img").loadthumb({
+					src: src
+				}).attr("bigimg", bigimgSrc);
+				$(this).addClass("current").siblings().removeClass("current");
+				return false;
+			});
+			$(".JS_pro_small li:nth-child(1)").trigger("click");
+		</script>
+	</body>
+
+</html>

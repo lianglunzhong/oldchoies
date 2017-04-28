@@ -1,0 +1,129 @@
+/*
+*@module: Common core mixin
+*@Author: juhailin 2015-01-14
+*@Update: 
+*/
+
+
+@charset "UTF-8";
+//-----------------------------------------------------  
+// mixin scss
+// 包括常用的mixin，%及@function
+// mixin，通过@include调用，样式通过拷贝的方式使用，尤其适用于传递参数
+// %，通过@extend调用，样式通过组合申明的方式使用，适用于不传参数的代码片段  
+// @function，返回一个值，用于调用
+//-----------------------------------------------------
+
+// mixin & %
+// 既定义了mixin也定义了%，根据需求使用@include或@extend调用
+//-----------------------------------------------------
+
+
+
+
+// inline-block
+@mixin inline-block($valign:middle) {
+	display: inline-block;
+	vertical-align: $valign;
+}
+%inline-block{
+	@include inline-block;
+}
+
+
+// float left & right
+@mixin float($float:left) {
+	float: $float;
+}
+%float{
+	@include float;
+}
+
+// clearfix
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+%clearfix{
+	@include clearfix;
+}
+
+
+// Opacity
+@mixin opacity($opacity:50) {
+	opacity: $opacity / 100;
+}
+%opacity{
+	@include opacity;
+}
+
+
+// disabled
+// 禁用样式，加!important
+@mixin disabled($bgColor:#e6e6e6,$textColor:#ababab){
+  background-color: $bgColor !important;
+  color: $textColor !important;
+  cursor: not-allowed !important;
+}
+%disabled{
+  @include disabled;
+}
+
+
+
+// WebKit-style focus
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+
+
+
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+
+
+
+
+

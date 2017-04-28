@@ -1,0 +1,287 @@
+// --------------------------------------------------
+// Navbar
+// --------------------------------------------------
+
+
+/* phone toggle */
+.ac-container{
+  text-align: left;
+
+  label{
+    padding-left: 15px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 34px;
+    cursor: pointer;
+    color: $gray-dark;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    background: $gray-lighter;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    background: $gray-lighter;
+    border-top:1px solid $gray-light;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+
+    a{
+      display: block;
+      color: $gray-dark;
+    }
+    &:hover {
+      background: $white;
+    }
+  }
+  input:checked + label{
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+    font-weight:bold;
+  }
+  input:checked + label:hover{
+    background: $white;
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+  }
+  label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    display: inline-block;
+  }
+  input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+  }
+  input{
+    display: none;
+  }
+  article{
+    background: rgba(255, 255, 255, 1.0);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+       -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+         -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+            transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    ul{
+      li{
+        a{
+          display: block;
+          color: $gray-dark;
+          line-height: 20px;
+          font-size: 14px;
+          padding:3px 30px;
+
+          &:hover {
+            background: $gray-light;
+          } 
+        }
+      }
+    }
+  }
+  input:checked ~ article{
+    -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+       -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+         -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+        -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+            transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    &.ac-small-hei1{
+      height: 390px;
+    }
+    &.ac-small-hei2{
+      height: 180px;
+    }
+    &.ac-small-hei3{
+      height: 285px;
+    }
+    &.ac-small-hei4{
+      height: 260px;
+    }
+  } 
+
+}
+.phone-product-info{
+  .accordion {
+    .link{
+      background-color: $white;
+      padding: 7px 0;
+    }
+    li i.fa-angle-down{
+      right:0px;
+    }
+  }
+  .submenu a{
+    padding:0px;
+    @include inline-block;
+    &.write-r{
+      padding: 0px;
+    }
+    &:hover{
+      background: $white;
+    }
+  }
+}
+.sort-nav-section{
+  .accordion {
+    .link{
+      background-color: $white;
+      padding: 7px 0;
+    }
+    li i.fa-angle-down{
+      right:0px;
+    }
+  }
+  .submenu a{
+    padding:0px;
+    @include inline-block;
+    &:hover{
+      background: $white;
+    }
+  }
+}
+
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+  background: $white;
+
+  .link {
+    cursor: pointer;
+    display: block;
+    padding: 7px 8px;
+    color: $gray-darker;
+    background: #efefef;
+    font-size: $font-size-base;
+    font-weight:bold;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    line-height: 25px;
+  }
+  .icon-collection{
+    display: inline-block;
+    padding-left:35px;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -7px;
+    min-width: 27px;
+    height: 31px;
+  }
+  .icon-dresses{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -40px;
+    min-width: 23px;
+    height: 31px;
+    padding-left:35px;
+  }
+  .icon-tops{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -72px;
+    min-width: 24px;
+    height: 31px;
+    padding-left:35px;
+  }
+  .icon-bottoms{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -104px;
+    min-width: 16px;
+    height: 31px;
+    padding-left:35px;
+  }
+  .icon-shoes{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -144px;
+    min-width: 28px;
+    height: 31px;
+    padding-left:35px;
+  }
+  .icon-jewellery{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -180px;
+    min-width: 24px;
+    height: 31px;
+    padding-left:35px;
+  }
+  .icon-acc{
+    display: inline-block;
+    background: url(../images/phone-nav-icon.png) no-repeat 0 -214px;
+    min-width: 27px;
+    height: 31px;
+    padding-left:35px;
+  }
+  li{
+      &:last-child .link {
+      border-bottom: 0;
+    }
+
+    &.open .link {
+      color: $gray-darker;
+      font-weight: bold;
+    }
+    &.open i {
+      color: $gray-dark;
+    }
+    &.open i.fa-chevron-down {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    i {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 18px;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      color: $gray;
+
+      &.fa-chevron-down {
+        right: 8px;
+        left: auto;
+        top:14px;
+        font-size: 10px;
+      }
+    }
+  } 
+ }
+
+
+/**
+ * Submenu
+ -----------------------------*/
+ .accordion{
+
+ }
+ .submenu {
+  display: none;
+  background: $white;
+  font-size: 14px;
+  li {
+    border-bottom: 1px solid #ddd;
+    margin-left:15px;
+   }
+   a {
+    display: block;
+    text-decoration: none;
+    color: $gray-dark;
+    padding: 13px 0;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    &:hover { 
+      font-weight: bold;
+     }
+   }
+ }

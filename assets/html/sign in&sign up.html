@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>sign in and sign up</title>
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<section id="main">
+			<div class="w-signup container">
+				<div class="signpage">
+					<p class="signin-top">
+						Register to get
+						<span>15%</span> off coupon & Complete profile to place first order to get another
+						<span>$15</span> points.
+					</p>
+				</div>
+				<div class="row">
+					<div class="left col-sm-6 col-xs-12">
+						<h3>CHOIES Member Sign In</h3>
+						<form class="signin-form sign-form form" method="post" action="/customer/login/">
+							<input type="hidden" value="https://www.choies.com/" name="referer">
+							<ul>
+								<li>
+									<div>
+										<label>Email address:</label>
+									</div>
+									<input class="text" type="email" name="email" value="">
+								</li>
+								<li>
+									<div>
+										<label>Password:</label>
+									</div>
+									<input class="text" type="password" maxlength="16" name="password" value="">
+								</li>
+								<li>
+									<input class="btn btn-primary btn-lg mr10" type="submit" name="submit" value="Sign In">
+									<a class="text-underline" href="forgot-password.html">Forgot password?</a>
+								</li>
+								<li>
+									<a class="facebook-btn" href="https://www.facebook.com/dialog/oauth?client_id=274338969357670&redirect_uri=http%3A%2F%2Fwww.choies.com%2F&state=1520f2d6acc5f5f2f6f7ea4e936dde9c&scope=email">Acceder con Facebook</a>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="right col-sm-6 col-xs-12">
+						<h3>CHOIES Member Sign Up</h3>
+						<form class="signup-form sign-form form" method="post" action="/customer/register/">
+							<input type="hidden" value="https://www.choies.com/" name="referer">
+							<ul>
+								<li>
+									<div>
+										<label>Email address:</label>
+									</div>
+									<input id="email" class="text" type="email" name="email" value="">
+								</li>
+								<li>
+									<div>
+										<label>Password:</label>
+									</div>
+									<input id="password" class="text" type="password" maxlength="16" name="password" value="">
+								</li>
+								<li>
+									<div>
+										<label>Confirm Password:</label>
+									</div>
+									<input class="text" type="password" maxlength="16" name="password_confirm" value="">
+								</li>
+								<li>
+									<input class="btn btn-primary btn-lg mr10" type="submit" name="submit" value="Sign Up">
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../js/common.js"></script>
+		<script src="../js/plugin.js"></script>
+		<script src="../js/slider.js"></script>
+        <script type="text/javascript">
+            //check email exists
+            $("#email").change(function(){
+                var email = $(this).val();
+                var has = email.indexOf('@');
+                if(has != -1)
+                {
+                    $.post(
+                        '/customer/email_exists',
+                        {
+                            email: email
+                        },
+                        function(result)
+                        {
+                            if(result != 1)
+                            {
+                                if (!window.confirm('Are you sure that your email address is ended with ' + result + '?'))
+                                {
+                                    $("#email").focus().select();
+                                }
+                            }
+                        },
+                        'json'
+                    );
+                }
+                
+            })
+            
+            // signin-form 
+            $(".signin-form").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5,
+                        maxlength:20
+                    }
+                },
+                messages: {
+                    email:{
+                        required:"Please provide an email.",
+                        email:"Please enter a valid email address."
+                    },
+                    password: {
+                        required: "Please provide a password.",
+                        minlength: "Your password must be at least 5 characters long.",
+                        maxlength: "The password exceeds maximum length of 20 characters."
+                    }
+                }
+            });
+
+            // signup-form 
+            $(".signup-form").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5,
+                        maxlength:20
+                    },
+                    password_confirm: {
+                        required: true,
+                        minlength: 5,
+                        maxlength:20,
+                        equalTo: "#password"
+                    }
+                },
+                messages: {
+                    email:{
+                        required:"Please provide an email.",
+                        email:"Please enter a valid email address."
+                    },
+                    password: {
+                        required: "Please provide a password.",
+                        minlength: "Your password must be at least 5 characters long.",
+                        maxlength:"The password exceeds maximum length of 20 characters."
+                    },
+                    password_confirm: {
+                        required: "Please provide a password.",
+                        minlength: "Your password must be at least 5 characters long.",
+                        maxlength:"The password exceeds maximum length of 20 characters.",
+                        equalTo: "Please enter the same password as above."
+                    }
+                }
+            });
+        </script>
+	</body>
+
+</html>

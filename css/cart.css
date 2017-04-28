@@ -1,0 +1,78 @@
+.shipping_add_address{margin:25px 0 50px; background-color:#f4f4f4; border:1px solid #ededed;}
+.shipping_address{ margin:10px 0 0; padding:10px;}
+.shipping_address li{ margin-bottom:10px; border:1px solid #f4f4f4; background:#f4f4f4; padding:10px;}
+.shipping_address li:hover{border:1px solid #d9d4d4; background:#fff;}
+.shipping_address li span.b,.shipping_address li .a_underline{ font-style:italic; margin-right:20px; font-weight:bold; display:inline-block;}
+.shipping_address li a{ margin:0 5px;}
+.shipping_address .view_btn{ height:26px; line-height:26px; padding:0 15px; border:0 none; vertical-align:middle;}
+.shipping_address li p.bottom{ margin:10px 0 0 20px; color:#666;}
+.shipping_address li p.bottom span.tel{ margin:0 20px;}
+.shipping_address li.last{ font-weight:bold;}
+.btn26 {background: #a0a0a0;}
+.shipping_address li p.bottom{padding:0;}
+.shipping_address div.fix{height: auto;}
+.shipping_address div.fix label b{padding-right: 200px;}
+
+.shipping_bottom_line{ height:2px; background:#000; margin-bottom:16px;}
+div.arrow-down {width:0px;height:0px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #000;font-size:0px;line-height:0px;left:30px;position:relative;}
+.promo-choies{ background-color:#f4f3f3; }
+.promo-choies ul{ margin:0 15px;}
+.promo-choies ul li.promo-code{ margin-bottom:20px;background-color:#dfdfdf;}
+.pc-apply{ text-align:center;}
+.promo-code p{ line-height:26px; text-align:center;}
+.promo-code p a{ text-decoration:underline;}
+.pc-apply{ height:26px; line-height:26px; padding:5px 10px;}
+.pc-apply a{ text-decoration:underline;}
+.promo-code .pc-ibutton{ padding:5px 10px; overflow:hidden;}
+.input-promo-code{display: block;width: 170px;height: 16px;padding: 4px 6px;font-size: 12px;line-height: 16px;color: #555;background-color: #FFF;background-image: none;border: 1px solid #CCC;}
+.btn-promo-code{ display:block; height:24px;background-color: #000;background-image: none; line-height:24px; padding:0 5px; color:#fff; border:none;}
+.additional-payment{padding: 0px 20px 30px;}
+.additional-payment p{ font-family:Verdana, Geneva, sans-serif;font-style:italic; font-weight:bold;}
+
+.cart h3 {font-size: 18px;margin-bottom: 10px;text-transform: uppercase;}
+.cart h4 {font-size: 14px;margin-bottom: 10px;}
+
+.shipping_payment{ margin:25px 0 50px; }
+.shipping_payment dt{ text-transform:uppercase;  margin-bottom:15px;}
+.shipping_payment dd{ margin-bottom:10px;}
+.shipping_payment dd li label img{ vertical-align:middle;}
+.shipping_payment .shipping_methods{ margin:0 0 20px; padding:3px;background:#fff; border:1px solid #fff;}
+.shipping_payment .shipping_methods:hover{ background:#f4f4f4; border:1px solid #d9d4d4;}
+
+.icon_tips {
+background: url(../images/icons.png) no-repeat 0 -1029px;
+display: inline-block;
+width: 16px;
+height: 16px;
+vertical-align: middle;
+margin-left: 5px;
+cursor: pointer;
+position: relative;
+}
+.icon_tipscon {
+position: absolute;
+top: -6px;
+left: auto;
+right: 25px;
+z-index: 1;
+border: 1px solid #ccc;
+background-color: #fff;
+padding: 10px;
+text-align: left;
+width: 433px;
+}
+.icon_tipscon i {
+margin-left: 32px;
+display: block;
+}
+.codelist_con {
+width: 180px;
+border: 1px solid #ccc;
+background-color: #fff;
+position: absolute;
+top: auto;
+left: auto;
+right: 25px;
+z-index: 1;
+padding-bottom: 10px;
+}

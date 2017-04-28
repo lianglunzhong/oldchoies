@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>account summary</title>
+		<link href="../../css/style.css" rel="stylesheet" type="text/css">
+		<script src="../../js/jquery-1.8.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- header begin -->
+
+		<!-- main begin -->
+		<section id="main">
+			<!-- crumbs -->
+			<div class="container">
+				<div class="crumbs">
+					<div>
+						<a href="/">home</a> > my account
+					</div>
+					<div class="back visible-xs-inline hidden-sm hidden-md hidden-lg">&lt;&lt;&nbsp;<a class="back" href="/">back</a></div>
+				</div>
+			</div>
+			<!-- main-middle begin -->
+			<div class="container">
+				<div class="row">
+					<aside id="aside" class="col-sm-3 col-xs-10  col-xs-offset-2 col-sm-offset-0">
+						<a href="#" class="user-home hidden-xs">My Account</a>
+						<div class="category-box">
+							<h3 class="bg">My Orders</h3>
+							<ul class="scroll-list">
+								<li><a href="user-order history.html">Order History</a>
+								</li>
+								<li><a href="#">Unpaid Orders</a>
+								</li>
+								<li><a href="#">Wish List</a>
+								</li>
+								<li><a href="#">Track Order</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">My Profile</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Account Setting</a>
+								</li>
+								<li><a href="#">Change Password</a>
+								</li>
+								<li><a href="#">Address Book</a>
+								</li>
+								<li><a href="#">Create Address</a>
+								</li>
+							</ul>
+						</div>
+						<div class="category-box">
+							<h3 class="bg">MY POINTS & COUPONS</h3>
+							<ul class="scroll-list">
+								<li><a href="#">Points History</a>
+								</li>
+								<li><a href="#">My Coupons</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+					<article class="user user-account col-sm-9 hidden-xs">
+						<div style="min-height:200px;">
+							<dl>
+								<dt>Hi, {user name} . Welcome to Choies.</dt>
+								<dd>PVIP Member or Not:<strong class="mr10"> {Yes/No}</strong><span>Expires on: <strong>2016/4/18</strong></span></dd>							
+							</dl>
+						
+							
+							<!--order-list-->
+							<div class="order-list fix">
+								<h4 style="font-size:18px;margin-bottom:10px;font-weight:normal;">Below are your recent orders: </h4>
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr bgcolor="#e4e4e4">
+										<th width="20%"><strong>Order Date</strong>
+										</th>
+										<th width="20%"><strong>Order No.</strong>
+										</th>
+										<th width="15%"><strong>Order Total</strong>
+										</th>
+										<th width="15%"><strong>Shipping</strong>
+										</th>
+										<th width="15%"><strong>Order Status</strong>
+										</th>
+										<th width="15%"><strong>Action</strong>
+										</th>
+									</tr>
+									<tr>
+										<td>1/4/2014 02:54:57</td>
+										<td><a href=“#”>2120200340</a>
+										</td>
+										<td>$84.64</td>
+										<td>$4.32</td>
+										<td>Unpaid</td>
+										<td><a class="btn btn-primary btn-xs">TO PAY</a>
+										</td>
+									</tr>
+									<tr>
+										<td>1/4/2014 02:54:57</td>
+										<td><a href=“#”>2120200340</a>
+										</td>
+										<td>$84.64</td>
+										<td>$4.32</td>
+										<td>Shipped</td>
+										<td><a class="btn btn-primary btn-xs">TRACK</a>
+										</td>
+									</tr>
+									<tr>
+										<td>1/4/2014 02:54:57</td>
+										<td><a href=“#”>2120200340</a>
+										</td>
+										<td>$84.64</td>
+										<td>$4.32</td>
+										<td>Pending</td>
+										<td><a href=“#”>View Details</a>
+										</td>
+									</tr>
+									<tr>
+										<td>1/4/2014 02:54:57</td>
+										<td><a href=“#”>2120200340</a>
+										</td>
+										<td>$84.64</td>
+										<td>$4.32</td>
+										<td>Delivered</td>
+										<td><a class="btn btn-primary btn-xs">REVIEW</a>
+										</td>
+									</tr>
+									<tr>
+										<td>1/4/2014 02:54:57</td>
+										<td><a href=“#”>2120200340</a>
+										</td>
+										<td>$84.64</td>
+										<td>$4.32</td>
+										<td>Processing</td>
+										<td><a href=“#”>View Details</a>
+										</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+						<div class="box-dibu1">
+                            <div class="w-tit">
+								<h2>Recently Viewed</h2>
+							</div>
+							<div id="personal-recs">
+								<div class="hide-box1-0">
+									<ul>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="hide-box1-1 hide">
+									<ul>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian2.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$13.9</b>
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="hide-box1-2 hide">
+									<ul>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian3.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="hide-box1-3 hide">
+									<ul>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+										<li class="rec-item">
+											<a href="#">
+												<img src="../../images/tupian4.jpg" class="rec-image">
+											</a>
+											<p class="price"><b>$9.9</b>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div id="JS-current1" class="box-current">
+								<ul>
+									<li class="on"></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- footer begin -->
+
+		<div id="gotop" class="hide">
+			<a href="#" class="xs-mobile-top"></a>
+		</div>
+
+		<script src="../../js/common.js"></script>
+		<script src="../../js/plugin.js"></script>
+		<script src="../../js/slider.js"></script>
+		<script src="../../js/buttons.js"></script>
+		<script src="../../js/zoom.js"></script>
+		<script src="../../js/product-rotation.js"></script>
+
+	</body>
+
+</html>
